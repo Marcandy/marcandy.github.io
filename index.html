@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='portfolio'>
+<head>
+	<title>Marc-Andy Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-controller='mainCtrl'>
+
+	<div class="container">
+		<header class="item">
+			<div class="col-6" id="logo">
+				<img src="images/logo.png" alt="logo" class="logo-img">
+			</div>
+			<article class="col-6" id="header-name">
+				<h1>Marc-Andy Noel Jeune</h1>
+				<h2>Web Developer</h2>
+			</article>
+		</header>
+		<hr class="item">
+		<main class="item">
+			<div class="col-6 col-6-left" id="profile">
+				<img src="images/profile.png" alt="mysef" id="pimg">
+			</div>
+			<em class="col-6 col-6-right" id="bio">
+				Hi! Welcome to my portfolio. I'm passionate about programming and making website for people. I'm constantly improving my skills especially in JavaScript. Below is list of websites and projects I've done.
+			</em>
+		</main>
+		<section class="item">
+				<h3 class="featured">Featured Work</h3>
+		</section>
+		<section class="item">
+			<figure class="col-4 col-4-style">
+				<img src="images/psca.png" alt="website" class="col-img">
+				<figcaption class="col-4-fig">
+					<h4>PSCA</h4>
+					<a href="http://www.pscaonline.org" class="links">Check Out</a>
+				</figcaption>
+			</figure>
+			<figure class="col-4 col-4-style">
+				<img src="images/arcade-game.png" alt="project" class="col-img">
+				<figcaption class="col-4-fig">
+					<h4>Frogger Clone</h4>
+					<a href="https://marcandy.github.io/frontend-arcade-game" class="links">Check Out</a>
+				</figcaption>
+			</figure>
+			<figure class="col-4 col-4-style">
+				<img src="images/accumula.png" alt="website" class="col-img">
+				<figcaption class="col-4-fig">
+					<h4>Accumula</h4>
+					<a href="http://www.accumulacare.org/" class="links">Check Out</a>
+				</figcaption>
+			</figure>
+		</section>
+		<footer>
+			<p id="pfeet">manJCode 2016</p>
+		</footer>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js" ></script>
+
+
+
+	<script src="app.js"></script>
+	<script src="mainCtrl.js"></script>
+
+	
+</body>
+</html>
