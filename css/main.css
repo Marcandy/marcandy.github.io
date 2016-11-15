@@ -147,7 +147,7 @@ hr {
 .col-img {
     text-align: center;
     width: 97%;
-    max-width: 355px;
+    max-width: 850px;
     min-width: 240px;
     display: block;
     margin: 0 auto;
@@ -201,7 +201,7 @@ footer {
         float: right;
     }
 
-    .col-4-style {
+    .col-12-style {
         width: 94%;
         display: block;
         float: none;
