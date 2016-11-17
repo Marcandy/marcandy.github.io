@@ -93,14 +93,17 @@
 .jumbo {
   height: 100vh;
   background-size: cover;
-  background-color: #1E1C27;
-
+  background-color: rgba(30, 28, 39,.95);
+  /*background: linear-gradient(rgba(30, 28, 39,.75),rgba(30, 28, 39,.75)), url("../images/long-pic.jpg");
+  background-position: center;
+  background-size: cover;*/
 }
 
 .header-name {
     text-align: center;
     margin: auto;
     padding-top: 25px;
+    color: white;
 }
 
 .jumboImg {
@@ -220,6 +223,7 @@ hr {
     background-color: #1c1d25;
     color: white;
     border-radius: 2%;
+    padding: 125px 0px;
 }
 
 .desT {
