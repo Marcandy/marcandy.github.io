@@ -156,7 +156,7 @@
 .featured {
 	margin: auto;
 	font-size: 22px;
-	color: gray;
+	color: #1c1d25;
 	text-decoration: underline overline;
 }
 
@@ -166,7 +166,7 @@ hr {
     width: 97%;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #e0e0e0;
+    /*background-color: #1c1d25;*/
 }
 
 .links {
@@ -205,18 +205,41 @@ hr {
     max-height: 260px;*/
 }
 
-.col-4-fig {
+/*-------description--------------------*/
+
+.col-8-fig {
     text-align: center;
-    display: block;
+    float: left;
+    /*display: block;*/
 }
+
+.descript {
+    float: right;
+    height: 100%;
+    width: 34%;
+    background-color: #1c1d25;
+    color: white;
+    border-radius: 2%;
+}
+
+.desT {
+  text-align: center;
+  text-decoration: underline;
+  margin: 15px;
+}
+
+/*-------description--------------------*/
+
 
 footer {
     margin-top: 25px;
     max-height: 40px;
     width: 100%;
     background-color: #f0f0f0;
- 	clear: both;
- 	text-align: center;
+ 	  clear: both;
+ 	  text-align: center;
+
+
 }
 
  #pfeet {
