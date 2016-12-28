@@ -109,7 +109,7 @@
 .jumboImg {
   float: right;
   /*min-width: 350px;*/
-  background: linear-gradient(rgba(30, 28, 39,.4),rgba(30, 28, 39,.4)), url("../images/long-pic.jpg");
+  background: linear-gradient(rgba(30, 28, 39,.4),rgba(30, 28, 39,.4)), url("../images/zoomB.jpg");
   background-position: center;
   background-size: cover;
   width: 97%;
