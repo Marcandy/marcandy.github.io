@@ -507,7 +507,7 @@ h3 {
   align-items: center;
   min-height: 2.3rem;
   padding: 0 0.8rem;
-  color: #6d746f;
+  color: #4f5551;
   background: #e7e9e4;
   border-bottom: 1px solid #bdc6bf;
 }
@@ -579,9 +579,13 @@ h3 {
 }
 
 .vera-title small,
-.vera-row small,
+.vera-row small {
+  color: #626762;
+  font-size: 0.52rem;
+}
+
 .vera-panel small {
-  color: #757b76;
+  color: #c4ccc7;
   font-size: 0.52rem;
 }
 
