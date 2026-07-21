@@ -36,6 +36,6 @@ Replace `assets/social-card.png` with a landscape image and update the `og:image
 
 ## Deployment
 
-Merging to `master` triggers `.github/workflows/deploy.yml`. The workflow stages only the public site files and deploys them to GitHub Pages. No manual release command is required after the merge.
+Merging to `master` triggers `.github/workflows/deploy.yml`. The workflow validates the source, stages only the public site files, and publishes them to `updateCover`, the repository's existing GitHub Pages source branch. No manual release command or settings change is required after the merge.
 
 The architecture, content choices, assumptions, and verification results are recorded in `DECISIONS.md`.
