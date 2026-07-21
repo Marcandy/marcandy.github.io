@@ -580,108 +580,11 @@ h3 {
   letter-spacing: 0.09em;
 }
 
-.vera-body {
-  display: grid;
-  grid-template-columns: minmax(7.5rem, 0.35fr) 1fr;
-  min-height: 25rem;
+.visual-shot {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
-.vera-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  padding: 1.25rem 0.8rem;
-  color: #eff5f1;
-  background: #183e32;
-}
-
-.vera-sidebar strong {
-  margin-bottom: 1rem;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.9rem;
-}
-
-.vera-sidebar span {
-  padding: 0.45rem 0.5rem;
-  border-radius: 0.2rem;
-  font-size: 0.55rem;
-}
-
-.vera-sidebar .active {
-  color: #183e32;
-  background: #d7e9df;
-  font-weight: 800;
-}
-
-.vera-main {
-  display: grid;
-  align-content: start;
-  gap: 0.65rem;
-  padding: 1.2rem;
-}
-
-.vera-title {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding-bottom: 0.65rem;
-  border-bottom: 1px solid #d7dad5;
-}
-
-.vera-title b {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.1rem;
-}
-
-.vera-title small,
-.vera-row small {
-  color: #626762;
-  font-size: 0.52rem;
-}
-
-.vera-panel small {
-  color: #c4ccc7;
-  font-size: 0.52rem;
-}
-
-.vera-row {
-  display: grid;
-  grid-template-columns: 3.4rem 1fr auto;
-  gap: 0.6rem;
-  align-items: center;
-  padding: 0.65rem;
-  border: 1px solid #d6d9d3;
-  background: white;
-}
-
-.vera-row b {
-  font-size: 0.62rem;
-}
-
-.status {
-  padding: 0.25rem;
-  border-radius: 999px;
-  font-size: 0.46rem;
-  font-weight: 800;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.ready { color: #18513f; background: #d8f0e5; }
-.review { color: #852b1a; background: #f5d8d2; }
-.active-status { color: #344c79; background: #dce6f7; }
-
-.vera-panel {
-  display: grid;
-  gap: 0.35rem;
-  margin-top: 0.4rem;
-  padding: 1rem;
-  color: white;
-  background: #1c2824;
-}
-
-.vera-panel b { font-size: 0.7rem; }
-.vera-panel i { width: 75%; height: 0.3rem; background: #db806a; }
 
 .pipeline-visual {
   padding: clamp(1.1rem, 3vw, 2.4rem);
@@ -1204,27 +1107,6 @@ footer p {
 
   .project-visual {
     box-shadow: 0.65rem 0.65rem 0 rgb(21 23 25 / 12%);
-  }
-
-  .vera-body {
-    grid-template-columns: 5.5rem 1fr;
-    min-height: 20rem;
-  }
-
-  .vera-sidebar {
-    padding: 0.8rem 0.45rem;
-  }
-
-  .vera-main {
-    padding: 0.75rem;
-  }
-
-  .vera-row {
-    grid-template-columns: 3rem 1fr;
-  }
-
-  .vera-row small {
-    display: none;
   }
 
   .pipeline-steps li {
