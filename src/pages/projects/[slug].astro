@@ -1,0 +1,103 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import { site } from '../../data/site';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { title, tagline, year, context, stack, links, image, imageAlt, imageWidth, imageHeight } =
+  project.data;
+
+const all = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const index = all.findIndex((p) => p.id === project.id);
+const prev = index > 0 ? all[index - 1] : undefined;
+const next = index < all.length - 1 ? all[index + 1] : undefined;
+---
+
+<Base title={`${title} — ${site.name}`} description={tagline} ogType="article">
+  <Header />
+  <main id="main" class="mx-auto max-w-3xl px-6 py-10 md:py-14">
+    <a href="/#projects" class="text-sm text-muted transition-colors hover:text-ink">
+      <span aria-hidden="true">←</span> All projects
+    </a>
+    <h1 class="mt-5 text-3xl font-bold tracking-tight md:text-4xl">{title}</h1>
+    <p class="mt-2 font-mono text-sm text-muted">{year} · {context}</p>
+    <p class="mt-4 text-lg text-muted">{tagline}</p>
+
+    <div class="mt-6 flex flex-col gap-4 rounded-lg border border-line bg-surface p-5">
+      <ul class="flex flex-wrap gap-2" aria-label="Tech stack">
+        {
+          stack.map((item) => (
+            <li class="rounded border border-line px-2 py-0.5 font-mono text-xs text-muted">
+              {item}
+            </li>
+          ))
+        }
+      </ul>
+      {
+        (links.live || links.repo) && (
+          <p class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium">
+            {links.live && (
+              <a href={links.live} class="text-accent transition-colors hover:text-accent-soft">
+                Live demo ↗
+              </a>
+            )}
+            {links.repo && (
+              <a href={links.repo} class="text-accent transition-colors hover:text-accent-soft">
+                Source code ↗
+              </a>
+            )}
+          </p>
+        )
+      }
+    </div>
+
+    {
+      image && (
+        <img
+          src={image}
+          alt={imageAlt ?? ''}
+          width={imageWidth}
+          height={imageHeight}
+          loading="lazy"
+          class="mt-8 h-auto w-full rounded-lg border border-line"
+        />
+      )
+    }
+
+    <div class="prose mt-8">
+      <Content />
+    </div>
+
+    <nav
+      class="mt-14 flex flex-wrap justify-between gap-4 border-t border-line pt-6 text-sm font-medium"
+      aria-label="More projects"
+    >
+      {
+        prev ? (
+          <a href={`/projects/${prev.id}/`} class="text-muted transition-colors hover:text-ink">
+            <span aria-hidden="true">←</span> {prev.data.title}
+          </a>
+        ) : (
+          <span />
+        )
+      }
+      {
+        next && (
+          <a href={`/projects/${next.id}/`} class="text-muted transition-colors hover:text-ink">
+            {next.data.title} <span aria-hidden="true">→</span>
+          </a>
+        )
+      }
+    </nav>
+  </main>
+</Base>

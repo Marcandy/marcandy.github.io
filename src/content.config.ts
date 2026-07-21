@@ -19,6 +19,8 @@ const projects = defineCollection({
       .default({}),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
+    imageWidth: z.number().optional(),
+    imageHeight: z.number().optional(),
   }),
 });
 
