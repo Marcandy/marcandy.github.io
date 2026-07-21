@@ -1,0 +1,26 @@
+---
+import { experience } from '../data/site';
+---
+
+<ol class="flex flex-col gap-10">
+  {
+    experience.map((job) => (
+      <li class="grid gap-2 md:grid-cols-[11rem_1fr] md:gap-8">
+        <div class="font-mono text-sm text-muted">
+          <p>{job.period}</p>
+          <p class="mt-1">{job.location}</p>
+        </div>
+        <div>
+          <h3 class="font-semibold">
+            {job.role} <span class="text-muted">· {job.company}</span>
+          </h3>
+          <ul class="mt-3 flex list-disc flex-col gap-2 pl-4 text-muted marker:text-accent">
+            {job.bullets.map((bullet) => (
+              <li class="pl-1">{bullet}</li>
+            ))}
+          </ul>
+        </div>
+      </li>
+    ))
+  }
+</ol>

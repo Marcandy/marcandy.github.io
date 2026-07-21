@@ -5,7 +5,11 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import { site } from '../data/site';
+import Experience from '../components/Experience.astro';
+import Skills from '../components/Skills.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import { site, about } from '../data/site';
 
 const projects = (await getCollection('projects'))
   .filter((p) => p.data.featured)
@@ -21,5 +25,20 @@ const projects = (await getCollection('projects'))
         {projects.map((p, i) => <ProjectCard project={p} featured={i === 0} />)}
       </div>
     </Section>
+    <Section id="experience" title="Experience">
+      <Experience />
+    </Section>
+    <Section id="skills" title="Skills">
+      <Skills />
+    </Section>
+    <Section id="about" title="About">
+      <div class="flex max-w-2xl flex-col gap-4 text-muted">
+        {about.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </Section>
+    <Section id="contact" title="Contact">
+      <Contact />
+    </Section>
   </main>
+  <Footer />
 </Base>
