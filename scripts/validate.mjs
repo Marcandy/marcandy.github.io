@@ -24,6 +24,7 @@ for (const file of [
   "assets/favicon.png",
   "assets/social-card.png",
   "assets/marc-andy-noel-jeune-resume.pdf",
+  ".openai/hosting.json",
 ]) {
   assert(existsSync(resolve(root, file)), `Missing required file: ${file}`);
 }

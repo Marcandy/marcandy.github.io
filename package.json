@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "python -m http.server 4173",
     "check": "node scripts/validate.mjs",
-    "build": "npm run check"
+    "build": "npm run check",
+    "build:sites": "npm run check && node scripts/build-sites.mjs"
   },
   "license": "MIT"
 }
