@@ -62,14 +62,49 @@ a {
 }
 
 .wordmark {
+  display: inline-flex;
+  gap: 0.75rem;
+  align-items: center;
   font-size: 0.88rem;
   font-weight: 800;
   text-decoration: none;
   letter-spacing: -0.025em;
 }
 
-.wordmark-short {
-  display: none;
+.mnj-mark {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex: 0 0 auto;
+  width: 3.35rem;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid currentcolor;
+  box-shadow: 0.2rem 0.2rem 0 var(--accent);
+  transform: rotate(-2deg);
+}
+
+.mnj-mark > span {
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  border-right: 1px solid currentcolor;
+  font-size: 0.58rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.mnj-mark > span:last-child {
+  border-right: 0;
+}
+
+.mnj-mark-header {
+  width: 3.1rem;
+}
+
+.mnj-mark-inverse {
+  color: var(--surface);
+  background: transparent;
 }
 
 nav {
@@ -235,6 +270,13 @@ h1 {
   box-shadow: 1rem 1rem 0 var(--accent);
 }
 
+.evidence-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .evidence-label {
   margin: 0;
   color: #cbc8be;
@@ -379,6 +421,19 @@ h2 {
   gap: 0.8rem;
   align-items: center;
   margin-bottom: 1.35rem;
+}
+
+.project-kicker::after {
+  margin-left: auto;
+  padding: 0.2rem 0.35rem;
+  color: var(--accent-dark);
+  border: 1px solid var(--accent-dark);
+  content: "MNJ";
+  font-size: 0.52rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  transform: rotate(-2deg);
 }
 
 .project-kicker span {
@@ -1020,6 +1075,16 @@ footer p {
   font-size: 0.72rem;
 }
 
+.footer-identity {
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.footer-identity .mnj-mark {
+  width: 2.85rem;
+}
+
 .hero-copy,
 .hero-evidence {
   animation: reveal 650ms ease both;
@@ -1116,10 +1181,6 @@ footer p {
   nav a:nth-child(3),
   nav a:nth-child(4) {
     display: none;
-  }
-
-  .wordmark-short {
-    display: inline;
   }
 
   .hero {
