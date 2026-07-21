@@ -12,7 +12,7 @@ const projects = (await getCollection('projects'))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
-<Base title={`${site.name} — ${site.role}`} description={site.description}>
+<Base title={`${site.name} · ${site.role}`} description={site.description}>
   <Header />
   <main id="main">
     <Hero />

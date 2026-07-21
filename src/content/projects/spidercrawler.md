@@ -11,7 +11,7 @@ links:
 
 ## Problem
 
-I needed structured data out of pages that don't offer an API — a classic scrape-and-serve job small enough to do carelessly. The point of this repo is that I didn't.
+I needed structured data out of pages that don't offer an API. A classic scrape-and-serve job, small enough to do carelessly. The point of this repo is that I didn't.
 
 ## Approach
 
@@ -19,13 +19,13 @@ An Express service wrapping an axios + cheerio scraper, with the extraction logi
 
 ## Key decisions
 
-- **Tests on a weekend-sized project.** A Jest suite covers the scraper, with supertest exercising the HTTP surface — because scrapers break silently, and a failing test is how you find out before your consumer does.
+- **Tests on a weekend-sized project.** A Jest suite covers the scraper, with supertest exercising the HTTP surface. Scrapers break silently, and a failing test is how you find out before your consumer does.
 - **CI from day one.** CircleCI runs the suite on every push, with `jest-junit` producing machine-readable reports the CI UI can surface.
 
 ## Result
 
-A small tool that does its job, plus public evidence of a habit: the engineering hygiene doesn't scale down just because the project did.
+A small tool that does its job, with tests and CI treated the same way I'd treat them on a real product.
 
 ## What I'd do next
 
-Recorded HTML fixtures for fully deterministic tests, a politeness layer (rate limiting, robots.txt respect) if it ever pointed at hosts I don't control, and a README (part of the same documentation uplift as the rest of my repos).
+Recorded HTML fixtures for fully deterministic tests, a politeness layer (rate limiting, robots.txt respect) if it ever pointed at hosts I don't control, and a README, as part of the same documentation uplift as the rest of my repos.

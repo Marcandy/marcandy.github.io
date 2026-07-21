@@ -1,5 +1,5 @@
 /**
- * Every site-wide fact lives here. Edit this file — never the components —
+ * Every site-wide fact lives here. Edit this file, never the components,
  * to change contact details, the headline, experience, or skills.
  */
 
@@ -7,7 +7,7 @@ export const site = {
   name: 'Marc-Andy Noel Jeune',
   role: 'Full-Stack & AI Engineer',
   headline:
-    'I build production web and mobile apps end to end — React, TypeScript, Node, and Python on AWS — and AI-driven automation that keeps humans in the loop.',
+    'I build production web and mobile apps end to end with React, TypeScript, Node, and Python on AWS. Lately that includes AI automation that keeps a human in the loop.',
   status:
     'Software consultant at Lotnivo since 2021 · open to full-time engineering roles',
   location: 'New York City metro · Remote',
@@ -21,14 +21,14 @@ export const site = {
     label: 'Resume (PDF)',
   },
   description:
-    'Full-stack software engineer with 10 years shipping production web and mobile apps — React, TypeScript, Node, Python, AWS — now building AI-driven automation and agent pipelines.',
+    'Full-stack software engineer with 10 years of production web and mobile experience in React, TypeScript, Node, Python, and AWS, now building AI-driven automation and agent pipelines.',
 };
 
 export const about: string[] = [
-  'My family moved from Haiti to the United States when I was 15, and a teenage fascination with how the web works turned into freelance WordPress builds for local businesses — then into a career.',
-  "Since then I've shipped software at enterprise scale — JCPenney's retail loyalty platform, internal financial applications at Wells Fargo — and since 2021 I've run my own consulting practice, Lotnivo, delivering full-stack products and AI-driven automation for clients.",
-  'I care about the unglamorous things that make software trustworthy: tests, accessibility, clear architecture, and documentation that tells the truth.',
-  "I'm now looking for a full-time software engineering role where that range is useful — and where I can keep learning from a strong team.",
+  "I started out freelancing on WordPress sites for local businesses before moving into product engineering at scale: JCPenney's retail loyalty platform, then internal financial applications at Wells Fargo.",
+  'Since 2021 I have worked as a software consultant at Lotnivo, delivering full-stack web and mobile products for clients, and more recently AI automation with human review built in.',
+  'I care about the things that make software hold up over time: tests, accessibility, clear architecture, and documentation that matches reality.',
+  'I am looking for a full-time engineering role where that range is useful and where I can keep learning from a strong team.',
 ];
 
 export interface Experience {
@@ -46,7 +46,7 @@ export const experience: Experience[] = [
     period: 'Mar 2021 – Present',
     location: 'Remote',
     bullets: [
-      'Architect and deliver full-stack web and mobile applications end to end — React, Next.js, React Native, Node.js, TypeScript — owning UI and backend services.',
+      'Architect and deliver full-stack web and mobile applications end to end with React, Next.js, React Native, Node.js, and TypeScript, owning both UI and backend services.',
       'Design REST and GraphQL APIs (Node/Express, Python/Django) integrating relational databases and AWS (S3, Lambda, EC2).',
       'Build AI-driven automation, including a multi-stage agent pipeline that scores inputs with cost-tiered models behind human-approval guardrails.',
       'Ship with tests (Jest, React Testing Library, Playwright), code review, Docker, and GitHub Actions CI/CD; mentor developers through pairing.',

@@ -11,7 +11,7 @@ links:
 
 ## Problem
 
-After years of enterprise React on the web, I wanted real depth on mobile — not a todo app, but something with the hard parts: media playback, navigation state, and a UI users already have opinions about. Cloning Spotify's player set a concrete, unforgiving bar.
+After years of enterprise React on the web, I wanted real depth on mobile. Not a todo app, but something with the hard parts: media playback, navigation state, and a UI users already have opinions about. Cloning Spotify's player set a concrete, unforgiving bar.
 
 ## Approach
 
@@ -19,13 +19,13 @@ React Native on Expo with TypeScript throughout, structured the way I'd structur
 
 ## Key decisions
 
-- **TypeScript-first, in 2021.** Typed React Native was still the road less traveled then; the payoff was refactoring the player flow without fear. The codebase is essentially all TypeScript.
-- **Player state in hooks.** Play/pause and track-change behavior live in dedicated hooks driven by effects, so the player widget stays a dumb component and the tricky lifecycle logic is testable in one place.
-- **Pull requests, even solo.** The app was built through 15 merged PRs — branch, review my own diff, merge. Working alone is not a reason to lose the discipline that makes work reviewable.
+- **TypeScript-first, in 2021.** Typed React Native wasn't the default choice then. It paid off every time I refactored the player flow, and the codebase is essentially all TypeScript.
+- **Player state in hooks.** Play/pause and track-change behavior live in dedicated hooks driven by effects, so the player widget stays a dumb component and the tricky lifecycle logic sits in one place.
+- **Pull requests, even solo.** The app was built through 15 merged PRs: branch, review the diff, merge. I kept the habit even without teammates, because it keeps the work reviewable.
 
 ## Result
 
-A working Spotify-style player: playlists, media playback, and streaming from the Node backend. Built as a 2021 personal project and honestly labeled as such — it's here because mobile is part of my stack, and this is the public evidence.
+A working Spotify-style player: playlists, media playback, and streaming from the Node backend. Built as a 2021 personal project and labeled as such. It's here because mobile is part of my stack, and this is the public evidence for it.
 
 ## What I'd do next
 
