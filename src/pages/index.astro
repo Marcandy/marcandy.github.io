@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import { site } from '../data/site';
 ---
 
-<Base
-  title="Marc-Andy Noel Jeune — Full-Stack & AI Engineer"
-  description="Full-stack software engineer with 10 years shipping production web and mobile apps — React, TypeScript, Node, Python, AWS — now building AI-driven automation."
->
+<Base title={`${site.name} — ${site.role}`} description={site.description}>
+  <Header />
   <main id="main">
-    <h1>Marc-Andy Noel Jeune</h1>
+    <Hero />
   </main>
 </Base>

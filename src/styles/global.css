@@ -2,11 +2,12 @@
 
 /*
  * Design tokens — dark minimal.
- * Contrast on --color-base: ink ~17:1, muted ~7.9:1, accent ~9:1 (all WCAG AA;
+ * Contrast on --color-canvas: ink ~17:1, muted ~7.9:1, accent ~9:1 (all WCAG AA;
  * ink and muted clear AAA). Never render text lighter than --color-muted.
+ * Named "canvas", not "base": text-base is a Tailwind font-size utility.
  */
 @theme {
-  --color-base: #09090b;
+  --color-canvas: #09090b;
   --color-surface: #18181b;
   --color-line: #27272a;
   --color-ink: #f4f4f5;
@@ -25,7 +26,7 @@
 }
 
 html {
-  background-color: var(--color-base);
+  background-color: var(--color-canvas);
   color: var(--color-ink);
   font-family: var(--font-sans);
   line-height: 1.7;
@@ -40,7 +41,7 @@ html {
 
 ::selection {
   background-color: var(--color-accent);
-  color: var(--color-base);
+  color: var(--color-canvas);
 }
 
 :focus-visible {

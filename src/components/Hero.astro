@@ -1,0 +1,47 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="mx-auto max-w-5xl px-6 pt-14 pb-20 md:pt-24 md:pb-28">
+  <p class="font-mono text-sm text-accent">{site.location}</p>
+  <h1
+    class="mt-4 text-[clamp(2.25rem,5vw,3.25rem)] leading-tight font-bold tracking-tight"
+  >
+    {site.name}
+  </h1>
+  <p class="mt-2 text-xl font-medium md:text-2xl">{site.role}</p>
+  <p class="mt-5 max-w-2xl text-muted">{site.headline}</p>
+  <p class="mt-4 flex max-w-2xl items-baseline gap-2 text-sm text-muted">
+    <span
+      class="inline-block size-2 shrink-0 translate-y-[-1px] rounded-full bg-accent"
+      aria-hidden="true"></span>
+    {site.status}
+  </p>
+  <div class="mt-8 flex flex-wrap gap-3">
+    {
+      site.resume.available && (
+        <a
+          href={site.resume.path}
+          class="rounded bg-accent px-4 py-2 font-medium text-canvas transition-colors hover:bg-accent-soft"
+        >
+          {site.resume.label}
+        </a>
+      )
+    }
+    <a
+      href={site.github}
+      class="rounded border border-line px-4 py-2 font-medium transition-colors hover:border-accent hover:text-accent"
+      >GitHub ↗</a
+    >
+    <a
+      href={site.linkedin}
+      class="rounded border border-line px-4 py-2 font-medium transition-colors hover:border-accent hover:text-accent"
+      >LinkedIn ↗</a
+    >
+    <a
+      href={`mailto:${site.email}`}
+      class="rounded border border-line px-4 py-2 font-medium transition-colors hover:border-accent hover:text-accent"
+      >Email</a
+    >
+  </div>
+</section>
