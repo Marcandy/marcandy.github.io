@@ -27,7 +27,7 @@ const next = index < all.length - 1 ? all[index + 1] : undefined;
 <Base title={`${title} · ${site.name}`} description={tagline} ogType="article">
   <Header />
   <main id="main" class="mx-auto max-w-3xl px-6 py-10 md:py-14">
-    <a href="/#projects" class="text-sm text-muted transition-colors hover:text-ink">
+    <a href="/#projects" class="inline-block py-1 text-sm text-muted transition-colors hover:text-ink">
       <span aria-hidden="true">←</span> All projects
     </a>
     <h1 class="mt-5 text-3xl font-bold tracking-tight md:text-4xl">{title}</h1>
@@ -48,12 +48,18 @@ const next = index < all.length - 1 ? all[index + 1] : undefined;
         (links.live || links.repo) && (
           <p class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium">
             {links.live && (
-              <a href={links.live} class="text-accent transition-colors hover:text-accent-soft">
+              <a
+                href={links.live}
+                class="inline-block py-1 text-accent transition-colors hover:text-accent-soft"
+              >
                 Live demo ↗
               </a>
             )}
             {links.repo && (
-              <a href={links.repo} class="text-accent transition-colors hover:text-accent-soft">
+              <a
+                href={links.repo}
+                class="inline-block py-1 text-accent transition-colors hover:text-accent-soft"
+              >
                 Source code ↗
               </a>
             )}
@@ -85,7 +91,10 @@ const next = index < all.length - 1 ? all[index + 1] : undefined;
     >
       {
         prev ? (
-          <a href={`/projects/${prev.id}/`} class="text-muted transition-colors hover:text-ink">
+          <a
+            href={`/projects/${prev.id}/`}
+            class="inline-block py-1 text-muted transition-colors hover:text-ink"
+          >
             <span aria-hidden="true">←</span> {prev.data.title}
           </a>
         ) : (
@@ -94,7 +103,10 @@ const next = index < all.length - 1 ? all[index + 1] : undefined;
       }
       {
         next && (
-          <a href={`/projects/${next.id}/`} class="text-muted transition-colors hover:text-ink">
+          <a
+            href={`/projects/${next.id}/`}
+            class="inline-block py-1 text-muted transition-colors hover:text-ink"
+          >
             {next.data.title} <span aria-hidden="true">→</span>
           </a>
         )

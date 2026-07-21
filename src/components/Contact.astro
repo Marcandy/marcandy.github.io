@@ -15,12 +15,12 @@ import { site } from '../data/site';
   <p class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium">
     {
       site.resume.available && (
-        <a href={site.resume.path} class="text-muted transition-colors hover:text-ink">
+        <a href={site.resume.path} class="inline-block py-1 text-muted transition-colors hover:text-ink">
           {site.resume.label}
         </a>
       )
     }
-    <a href={site.github} class="text-muted transition-colors hover:text-ink">GitHub ↗</a>
-    <a href={site.linkedin} class="text-muted transition-colors hover:text-ink">LinkedIn ↗</a>
+    <a href={site.github} class="inline-block py-1 text-muted transition-colors hover:text-ink">GitHub ↗</a>
+    <a href={site.linkedin} class="inline-block py-1 text-muted transition-colors hover:text-ink">LinkedIn ↗</a>
   </p>
 </div>

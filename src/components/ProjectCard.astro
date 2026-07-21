@@ -35,20 +35,20 @@ const href = `/projects/${project.id}/`;
     }
   </ul>
   <p class="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-1 text-sm font-medium">
-    <a href={href} class="text-accent transition-colors hover:text-accent-soft">
+    <a href={href} class="inline-block py-1 text-accent transition-colors hover:text-accent-soft">
       Case study<span class="sr-only"> — {title}</span>
       <span aria-hidden="true">→</span>
     </a>
     {
       links.live && (
-        <a href={links.live} class="text-muted transition-colors hover:text-ink">
+        <a href={links.live} class="inline-block py-1 text-muted transition-colors hover:text-ink">
           Live demo<span class="sr-only"> — {title}</span> ↗
         </a>
       )
     }
     {
       links.repo && (
-        <a href={links.repo} class="text-muted transition-colors hover:text-ink">
+        <a href={links.repo} class="inline-block py-1 text-muted transition-colors hover:text-ink">
           Code<span class="sr-only"> — {title}</span> ↗
         </a>
       )
