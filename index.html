@@ -14,7 +14,10 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Marc-Andy Noel Jeune, home">MNJ</a>
+      <a class="wordmark" href="#top" aria-label="Marc-Andy Noel Jeune, home">
+        <span class="wordmark-full">Marc-Andy Noel Jeune</span>
+        <span class="wordmark-short" aria-hidden="true">MNJ</span>
+      </a>
       <nav aria-label="Primary navigation">
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
@@ -24,9 +27,46 @@
     </header>
 
     <main id="main-content">
-      <section class="build-placeholder" id="top" aria-labelledby="page-title">
-        <p class="eyebrow">Full-stack software engineer</p>
-        <h1 id="page-title">Portfolio rebuild in progress.</h1>
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="availability"><span aria-hidden="true"></span> Open to software engineering roles</p>
+          <p class="eyebrow">Marc-Andy Noel Jeune · Full-stack software engineer</p>
+          <h1 id="page-title">I build software from interface to infrastructure.</h1>
+          <p class="hero-summary">
+            Ten years shipping production web and mobile applications. I work across React,
+            TypeScript, Node.js, Python, and AWS, with enterprise experience at Wells Fargo
+            and JCPenney.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button button-primary" href="assets/marc-andy-noel-jeune-resume.pdf" download>Download resume</a>
+            <a class="button button-secondary" href="mailto:marcandy.nj@gmail.com">Email me</a>
+          </div>
+          <div class="profile-links" aria-label="Professional profiles">
+            <a href="https://github.com/Marcandy">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/marcandy/">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <aside class="hero-evidence" aria-label="Career highlights">
+          <p class="evidence-label">What I bring</p>
+          <div class="evidence-number">
+            <strong>10</strong>
+            <span>years building<br>production software</span>
+          </div>
+          <ul>
+            <li><span>01</span> Web and mobile delivery</li>
+            <li><span>02</span> Front end and backend systems</li>
+            <li><span>03</span> Accessibility and performance</li>
+            <li><span>04</span> Code review and mentorship</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="proof-strip" aria-label="Core technologies and experience">
+        <p>React + TypeScript</p>
+        <p>Node.js + Python</p>
+        <p>AWS + Docker</p>
+        <p>Enterprise + consulting</p>
       </section>
     </main>
   </body>
