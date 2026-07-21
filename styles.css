@@ -988,6 +988,121 @@ footer p {
   width: 2.85rem;
 }
 
+.case {
+  width: min(calc(100% - 3rem), 56rem);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(5rem, 9vw, 7rem);
+}
+
+.case-crumbs {
+  margin: 0 0 2.75rem;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.case-crumbs a,
+.case-nav a {
+  text-underline-offset: 0.35rem;
+  text-decoration-thickness: 2px;
+}
+
+.case .project-kicker {
+  margin-bottom: 1.75rem;
+}
+
+.case h1 {
+  max-width: 14ch;
+  font-size: clamp(2.9rem, 6vw, 5.2rem);
+}
+
+.case-summary {
+  max-width: 40rem;
+  margin: 1.75rem 0 0;
+  color: #3f403c;
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.case .tag-list,
+.case .project-links {
+  margin-top: 1.75rem;
+}
+
+.case-figure {
+  margin: 3rem 0 0;
+}
+
+.case-figure figcaption {
+  margin-top: 0.7rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.case-body h2 {
+  max-width: none;
+  margin: 3rem 0 0;
+  font-size: clamp(1.6rem, 2.6vw, 2.15rem);
+  line-height: 1.1;
+}
+
+.case-body p {
+  max-width: 44rem;
+  margin: 1.1rem 0 0;
+  color: #454640;
+  font-size: 0.98rem;
+}
+
+.case-body ul {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  color: #454640;
+  list-style: none;
+}
+
+.case-body li {
+  position: relative;
+  max-width: 44rem;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.case-body li::before {
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 0.35rem;
+  height: 0.35rem;
+  background: var(--accent);
+  border-radius: 50%;
+  content: "";
+}
+
+.case-body strong {
+  color: var(--ink);
+}
+
+.case-body code {
+  padding: 0.1rem 0.35rem;
+  background: #e9e5da;
+  border: 1px solid var(--line);
+  font-family: Consolas, Menlo, monospace;
+  font-size: 0.85em;
+}
+
+.case-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ink);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
 .hero-copy,
 .hero-evidence {
   animation: reveal 650ms ease both;
