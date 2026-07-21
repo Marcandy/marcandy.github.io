@@ -760,6 +760,11 @@ h3 {
   font-size: 0.68rem;
 }
 
+.term-screen code {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 .term-line:last-child {
   margin-bottom: 0;
 }
