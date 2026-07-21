@@ -5,6 +5,7 @@ year: "2023"
 context: "Utility project"
 stack: ["Node.js", "Express", "Cheerio", "Jest", "CircleCI"]
 order: 5
+accent: "orange"
 links:
   repo: "https://github.com/Marcandy/spiderCrawler"
 ---

@@ -2,13 +2,20 @@
 import { site } from '../data/site';
 ---
 
-<section class="mx-auto max-w-5xl px-6 pt-14 pb-20 md:pt-24 md:pb-28">
-  <p class="font-mono text-sm text-accent">{site.location}</p>
-  <h1
-    class="mt-4 text-[clamp(2.25rem,5vw,3.25rem)] leading-tight font-bold tracking-tight"
+<section class="relative">
+  <div
+    class="pointer-events-none absolute inset-0"
+    aria-hidden="true"
+    style="background: radial-gradient(700px 420px at 85% 0%, rgba(56, 189, 248, 0.14), transparent 65%), radial-gradient(600px 420px at 0% 100%, rgba(167, 139, 250, 0.1), transparent 65%);"
   >
-    {site.name}
-  </h1>
+  </div>
+  <div class="relative mx-auto max-w-5xl px-6 pt-14 pb-20 md:pt-24 md:pb-28">
+    <p class="font-mono text-sm text-accent">{site.location}</p>
+    <h1
+      class="mt-4 w-fit bg-linear-to-r from-sky-300 via-sky-400 to-violet-400 bg-clip-text text-[clamp(2.25rem,5vw,3.25rem)] leading-tight font-bold tracking-tight text-transparent"
+    >
+      {site.name}
+    </h1>
   <p class="mt-2 text-xl font-medium md:text-2xl">{site.role}</p>
   <p class="mt-5 max-w-2xl text-muted">{site.headline}</p>
   <p class="mt-4 flex max-w-2xl items-baseline gap-2 text-sm text-muted">
@@ -43,5 +50,6 @@ import { site } from '../data/site';
       class="rounded border border-line px-4 py-2 font-medium transition-colors hover:border-accent hover:text-accent"
       >Email</a
     >
+    </div>
   </div>
 </section>

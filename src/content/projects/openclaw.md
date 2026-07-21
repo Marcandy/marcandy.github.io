@@ -5,6 +5,7 @@ year: "2021 – present"
 context: "Private consulting work · Lotnivo"
 stack: ["TypeScript", "Node.js", "LLM APIs", "Agentic workflows"]
 order: 2
+accent: "violet"
 links: {}
 ---
 

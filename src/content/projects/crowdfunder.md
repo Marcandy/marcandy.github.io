@@ -5,6 +5,7 @@ year: "2017"
 context: "DevMountain capstone"
 stack: ["React", "Redux", "Node.js", "PostgreSQL", "Stripe", "Amazon S3"]
 order: 4
+accent: "amber"
 links:
   repo: "https://github.com/Marcandy/crowdFunder"
 image: "/images/projects/crowdfunder.webp"

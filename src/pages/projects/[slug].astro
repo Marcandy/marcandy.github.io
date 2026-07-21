@@ -30,7 +30,12 @@ const next = index < all.length - 1 ? all[index + 1] : undefined;
     <a href="/#projects" class="inline-block py-1 text-sm text-muted transition-colors hover:text-ink">
       <span aria-hidden="true">←</span> All projects
     </a>
-    <h1 class="mt-5 text-3xl font-bold tracking-tight md:text-4xl">{title}</h1>
+    <div
+      class="mt-5 mb-3 h-1 w-8 rounded-full bg-linear-to-r from-sky-400 to-violet-400"
+      aria-hidden="true"
+    >
+    </div>
+    <h1 class="text-3xl font-bold tracking-tight md:text-4xl">{title}</h1>
     <p class="mt-2 font-mono text-sm text-muted">{year} · {context}</p>
     <p class="mt-4 text-lg text-muted">{tagline}</p>
 

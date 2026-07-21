@@ -5,6 +5,11 @@ year: "2026"
 context: "In active development"
 stack: ["React", "Vite", "React Router", "CSS Modules", "Vercel"]
 order: 1
+accent: "sky"
+image: "/images/projects/vera.webp"
+imageAlt: "Vera admin dashboard listing home-care visits with needs-review, ready-to-bill, and in-progress statuses"
+imageWidth: 1200
+imageHeight: 750
 links:
   live: "https://vera-homecare.vercel.app"
   repo: "https://github.com/Marcandy/vera"

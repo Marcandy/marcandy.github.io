@@ -8,50 +8,97 @@ interface Props {
 }
 
 const { project, featured = false } = Astro.props;
-const { title, tagline, year, context, stack, links } = project.data;
+const { title, tagline, year, context, stack, links, image, imageWidth, imageHeight, accent } =
+  project.data;
 const href = `/projects/${project.id}/`;
+
+/* Tailwind needs literal class names, so accents map to static strings. */
+const accents = {
+  sky: { bar: 'bg-sky-400', title: 'hover:text-sky-400', link: 'text-sky-400 hover:text-sky-300' },
+  emerald: {
+    bar: 'bg-emerald-400',
+    title: 'hover:text-emerald-400',
+    link: 'text-emerald-400 hover:text-emerald-300',
+  },
+  violet: {
+    bar: 'bg-violet-400',
+    title: 'hover:text-violet-400',
+    link: 'text-violet-400 hover:text-violet-300',
+  },
+  amber: {
+    bar: 'bg-amber-400',
+    title: 'hover:text-amber-300',
+    link: 'text-amber-300 hover:text-amber-200',
+  },
+  orange: {
+    bar: 'bg-orange-400',
+    title: 'hover:text-orange-400',
+    link: 'text-orange-400 hover:text-orange-300',
+  },
+} as const;
+const a = accents[accent];
 ---
 
 <article
   class:list={[
-    'flex flex-col gap-4 rounded-lg border border-line bg-surface p-6',
+    'flex flex-col overflow-hidden rounded-lg border border-line bg-surface',
     featured && 'md:col-span-2',
   ]}
 >
-  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-    <h3 class="text-lg font-semibold">
-      <a href={href} class="transition-colors hover:text-accent">{title}</a>
-    </h3>
-    <p class="font-mono text-xs text-muted">{year} · {context}</p>
+  <span class:list={['h-0.5 w-full', a.bar]} aria-hidden="true"></span>
+  {
+    image && (
+      <a href={href} tabindex="-1" aria-hidden="true" class="block border-b border-line">
+        <img
+          src={image}
+          alt=""
+          width={imageWidth}
+          height={imageHeight}
+          loading={featured ? 'eager' : 'lazy'}
+          class:list={[
+            'w-full object-cover object-top',
+            featured ? 'aspect-[21/9]' : 'aspect-[2/1]',
+          ]}
+        />
+      </a>
+    )
+  }
+  <div class="flex grow flex-col gap-4 p-6">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+      <h3 class="text-lg font-semibold">
+        <a href={href} class:list={['transition-colors', a.title]}>{title}</a>
+      </h3>
+      <p class="font-mono text-xs text-muted">{year} · {context}</p>
+    </div>
+    <p class="max-w-2xl text-muted">{tagline}</p>
+    <ul class="flex flex-wrap gap-2" aria-label={`Tech stack for ${title}`}>
+      {
+        stack.map((item) => (
+          <li class="rounded border border-line px-2 py-0.5 font-mono text-xs text-muted">
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+    <p class="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-1 text-sm font-medium">
+      <a href={href} class:list={['inline-block py-1 transition-colors', a.link]}>
+        Case study<span class="sr-only"> — {title}</span>
+        <span aria-hidden="true">→</span>
+      </a>
+      {
+        links.live && (
+          <a href={links.live} class="inline-block py-1 text-muted transition-colors hover:text-ink">
+            Live demo<span class="sr-only"> — {title}</span> ↗
+          </a>
+        )
+      }
+      {
+        links.repo && (
+          <a href={links.repo} class="inline-block py-1 text-muted transition-colors hover:text-ink">
+            Code<span class="sr-only"> — {title}</span> ↗
+          </a>
+        )
+      }
+    </p>
   </div>
-  <p class="max-w-2xl text-muted">{tagline}</p>
-  <ul class="flex flex-wrap gap-2" aria-label={`Tech stack for ${title}`}>
-    {
-      stack.map((item) => (
-        <li class="rounded border border-line px-2 py-0.5 font-mono text-xs text-muted">
-          {item}
-        </li>
-      ))
-    }
-  </ul>
-  <p class="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-1 text-sm font-medium">
-    <a href={href} class="inline-block py-1 text-accent transition-colors hover:text-accent-soft">
-      Case study<span class="sr-only"> — {title}</span>
-      <span aria-hidden="true">→</span>
-    </a>
-    {
-      links.live && (
-        <a href={links.live} class="inline-block py-1 text-muted transition-colors hover:text-ink">
-          Live demo<span class="sr-only"> — {title}</span> ↗
-        </a>
-      )
-    }
-    {
-      links.repo && (
-        <a href={links.repo} class="inline-block py-1 text-muted transition-colors hover:text-ink">
-          Code<span class="sr-only"> — {title}</span> ↗
-        </a>
-      )
-    }
-  </p>
 </article>

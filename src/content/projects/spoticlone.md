@@ -5,6 +5,7 @@ year: "2021"
 context: "Personal project"
 stack: ["React Native", "Expo", "TypeScript", "Node.js"]
 order: 3
+accent: "emerald"
 links:
   repo: "https://github.com/Marcandy/spoticlone"
 ---

@@ -11,6 +11,7 @@ const projects = defineCollection({
     stack: z.array(z.string()),
     order: z.number(),
     featured: z.boolean().default(true),
+    accent: z.enum(['sky', 'emerald', 'violet', 'amber', 'orange']).default('sky'),
     links: z
       .object({
         live: z.string().url().optional(),
