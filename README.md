@@ -10,6 +10,12 @@ npm run dev
 
 Open `http://localhost:4173`. There is no production build step and no application dependency to install.
 
+Run the repeatable content and asset checks before committing:
+
+```bash
+npm run check
+```
+
 ## Update the site
 
 ### Edit a project

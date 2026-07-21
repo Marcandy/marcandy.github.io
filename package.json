@@ -4,7 +4,9 @@
   "private": true,
   "description": "The portfolio of full-stack software engineer Marc-Andy Noel Jeune.",
   "scripts": {
-    "dev": "python -m http.server 4173"
+    "dev": "python -m http.server 4173",
+    "check": "node scripts/validate.mjs",
+    "build": "npm run check"
   },
   "license": "MIT"
 }
