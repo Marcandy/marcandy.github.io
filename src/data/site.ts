@@ -82,7 +82,7 @@ export interface SkillGroup {
 export const skills: SkillGroup[] = [
   {
     group: 'Languages',
-    items: ['TypeScript', 'JavaScript (ES6+)', 'Python', 'SQL', 'HTML5', 'CSS3'],
+    items: ['TypeScript', 'JavaScript (ES6+)', 'Python', 'Java', 'SQL', 'HTML5', 'CSS3'],
   },
   {
     group: 'Front End',
@@ -90,7 +90,7 @@ export const skills: SkillGroup[] = [
   },
   {
     group: 'Back End',
-    items: ['Node.js', 'Express', 'Django', 'REST API design', 'GraphQL', 'PostgreSQL'],
+    items: ['Node.js', 'Express', 'Django', 'Spring Boot', 'REST API design', 'GraphQL', 'PostgreSQL'],
   },
   {
     group: 'Cloud & DevOps',
