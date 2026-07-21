@@ -68,6 +68,241 @@
         <p>AWS + Docker</p>
         <p>Enterprise + consulting</p>
       </section>
+
+      <section class="work section-shell" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Four builds. Four different engineering problems.</h2>
+          <p>
+            I chose work that shows product judgment, automation, mobile development,
+            and full-stack delivery. Each story is grounded in code or experience from my resume.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card">
+            <div class="project-copy">
+              <div class="project-kicker">
+                <span>01</span>
+                <p>Product MVP · 2026</p>
+              </div>
+              <h3>Vera</h3>
+              <p class="project-summary">
+                A home care operations workspace that connects scheduled visits,
+                caregiver records, evidence review, and billing readiness.
+              </p>
+              <dl class="project-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Small agencies need one clear path from a caregiver visit to a billable record.</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>React and Vite with a service layer that keeps domain rules out of UI components.</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>Derive missing evidence and work status from records instead of storing duplicate flags.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>A live portfolio MVP with administrator and phone-width caregiver flows.</dd>
+                </div>
+              </dl>
+              <ul class="tag-list" aria-label="Vera technologies">
+                <li>React</li>
+                <li>Vite</li>
+                <li>CSS Modules</li>
+                <li>Service layer</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://vera-homecare.vercel.app">Live demo <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/Marcandy/vera">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+
+            <div class="project-visual vera-visual" role="img" aria-label="Vera visit pipeline interface preview">
+              <div class="visual-window">
+                <div class="visual-toolbar"><span></span><span></span><span></span><b>VERA / VISITS</b></div>
+                <div class="vera-body">
+                  <div class="vera-sidebar">
+                    <strong>Good morning.</strong>
+                    <span>Dashboard</span><span class="active">Visits</span><span>Billing</span><span>Caregivers</span>
+                  </div>
+                  <div class="vera-main">
+                    <div class="vera-title"><b>Today's visits</b><small>4 records</small></div>
+                    <div class="vera-row"><span class="status ready">Ready</span><b>Maria / Helen</b><small>8:00 AM</small></div>
+                    <div class="vera-row"><span class="status review">Review</span><b>James / Andre</b><small>9:30 AM</small></div>
+                    <div class="vera-row"><span class="status active-status">Active</span><b>Ruth / Taylor</b><small>11:00 AM</small></div>
+                    <div class="vera-panel"><small>VISIT EVIDENCE</small><b>3 of 4 items verified</b><i></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card-reverse">
+            <div class="project-copy">
+              <div class="project-kicker">
+                <span>02</span>
+                <p>Automation system · Consulting</p>
+              </div>
+              <h3>OpenClaw automation pipeline</h3>
+              <p class="project-summary">
+                A self-hosted agent workflow that turns incoming items into ranked,
+                reviewable actions and documents.
+              </p>
+              <dl class="project-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>High-volume inputs needed consistent triage without sending every task to the most expensive model.</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>TypeScript and Node.js stages ingest, score, rank, and route work to messaging digests.</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>Use cost-tiered models for different stages and require human approval before document delivery.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>Automated ranking and document generation with an explicit review boundary.</dd>
+                </div>
+              </dl>
+              <ul class="tag-list" aria-label="OpenClaw pipeline technologies">
+                <li>TypeScript</li>
+                <li>Node.js</li>
+                <li>LLM routing</li>
+                <li>Human approval</li>
+              </ul>
+              <p class="private-note">Consulting system. Code is private.</p>
+            </div>
+
+            <div class="project-visual pipeline-visual" role="img" aria-label="OpenClaw staged automation pipeline preview">
+              <div class="pipeline-head">
+                <span>PIPELINE / RUN 1842</span><b>Approval required</b>
+              </div>
+              <ol class="pipeline-steps">
+                <li><span>01</span><div><b>Ingest</b><small>12 items from 3 sources</small></div><i>Done</i></li>
+                <li><span>02</span><div><b>Score</b><small>Fast model · structured output</small></div><i>Done</i></li>
+                <li><span>03</span><div><b>Rank</b><small>4 items above threshold</small></div><i>Done</i></li>
+                <li class="pipeline-current"><span>04</span><div><b>Review</b><small>Human decision before delivery</small></div><i>Wait</i></li>
+                <li><span>05</span><div><b>Deliver</b><small>Digest + generated document</small></div><i>Locked</i></li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-copy">
+              <div class="project-kicker">
+                <span>03</span>
+                <p>Mobile prototype</p>
+              </div>
+              <h3>SpotiClone</h3>
+              <p class="project-summary">
+                A React Native music application with album browsing, app navigation,
+                and media playback controls.
+              </p>
+              <dl class="project-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Playback controls and progress needed to remain available while moving between mobile views.</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>Build the client in React Native and TypeScript with Expo Audio and React Navigation.</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>Mount one player beside the navigation root and update progress from playback status events.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>A typed mobile prototype with album views, play and pause controls, and live progress.</dd>
+                </div>
+              </dl>
+              <ul class="tag-list" aria-label="SpotiClone technologies">
+                <li>React Native</li>
+                <li>TypeScript</li>
+                <li>Expo Audio</li>
+                <li>React Navigation</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Marcandy/spoticlone">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+
+            <div class="project-visual music-visual" role="img" aria-label="SpotiClone mobile player preview">
+              <div class="music-screen">
+                <div class="music-top"><span>9:41</span><span>•••</span></div>
+                <div class="album-art"><span>STAY<br>CURIOUS</span></div>
+                <small>PLAYLIST</small>
+                <h4>Deep Focus</h4>
+                <p>Built for long coding sessions.</p>
+                <div class="song-row"><span>01</span><b>Signal Path</b><small>3:42</small></div>
+                <div class="song-row"><span>02</span><b>Static Light</b><small>4:08</small></div>
+                <div class="player-row"><span>◼</span><div><b>Signal Path</b><i></i></div><strong>Ⅱ</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card-reverse">
+            <div class="project-copy">
+              <div class="project-kicker">
+                <span>04</span>
+                <p>Full-stack web application</p>
+              </div>
+              <h3>CrowdFunder</h3>
+              <p class="project-summary">
+                A crowdfunding application with campaign creation, authentication,
+                project discovery, and a Stripe contribution flow.
+              </p>
+              <dl class="project-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Campaign owners needed a multi-step publishing flow and backers needed a clear way to contribute.</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>React and Redux on the client with Express, PostgreSQL, Google sign-in, Stripe, and Amazon S3.</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>Keep request controllers and SQL operations separate so each API path had one clear responsibility.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>A complete early-career full-stack build covering identity, data, uploads, and payments.</dd>
+                </div>
+              </dl>
+              <ul class="tag-list" aria-label="CrowdFunder technologies">
+                <li>React</li>
+                <li>Redux</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
+                <li>Stripe</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Marcandy/crowdFunder">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+
+            <div class="project-visual fund-visual" role="img" aria-label="CrowdFunder campaign interface preview">
+              <div class="fund-card">
+                <div class="fund-image"><span>COMMUNITY<br>WORKSHOP</span></div>
+                <div class="fund-content">
+                  <small>PHILADELPHIA · COMMUNITY</small>
+                  <h4>Tools and space for neighborhood makers</h4>
+                  <div class="fund-progress"><i></i></div>
+                  <div class="fund-stats"><p><b>$18,420</b><span>pledged</span></p><p><b>74%</b><span>funded</span></p><p><b>12</b><span>days left</span></p></div>
+                  <button type="button" tabindex="-1">Back this project</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
   </body>
 </html>
