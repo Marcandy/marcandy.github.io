@@ -24,7 +24,7 @@ Project case studies live in the `#work` section of `index.html`. Copy an existi
 
 ### Update skills or experience
 
-The experience and skills sections also live in `index.html`. Keep dates and titles aligned with the current resume. Put technologies that are still developing under Working knowledge.
+The experience and skills sections also live in `index.html`. Keep dates, titles, and proficiency claims aligned with the current resume.
 
 ### Replace the resume
 

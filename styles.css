@@ -887,10 +887,6 @@ h3 {
   border-left: 1px solid rgb(255 255 255 / 20%);
 }
 
-.skill-groups .skill-working {
-  grid-column: 1 / -1;
-}
-
 .skill-groups article > p {
   margin: 0 0 1rem;
   color: #ef8c76;
@@ -1196,10 +1192,6 @@ footer p {
   .skill-groups article:nth-child(even) {
     padding: 1.25rem 0;
     border-left: 0;
-  }
-
-  .skill-groups .skill-working {
-    grid-column: auto;
   }
 
   .about {
