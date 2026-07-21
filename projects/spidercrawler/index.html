@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>spiderCrawler case study | Marc-Andy Noel Jeune</title>
+    <meta
+      name="description"
+      content="A small Node.js scraper with big-project hygiene: an isolated extraction layer, a Jest suite with supertest, and CircleCI on every push."
+    >
+    <meta name="author" content="Marc-Andy Noel Jeune">
+    <meta name="theme-color" content="#f3f0e8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://marcandy.github.io/projects/spidercrawler/">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Marc-Andy Noel Jeune">
+    <meta property="og:title" content="spiderCrawler case study | Marc-Andy Noel Jeune">
+    <meta property="og:description" content="A small Node.js scraper with big-project hygiene: Jest suite, supertest, CircleCI.">
+    <meta property="og:url" content="https://marcandy.github.io/projects/spidercrawler/">
+    <meta property="og:image" content="https://marcandy.github.io/assets/social-card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="spiderCrawler case study | Marc-Andy Noel Jeune">
+    <meta name="twitter:image" content="https://marcandy.github.io/assets/social-card.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="MNJ, Marc-Andy Noel Jeune, home">
+        <span class="mnj-mark mnj-mark-header" aria-hidden="true">
+          <span>M</span><span>N</span><span>J</span>
+        </span>
+        <span class="wordmark-full">Marc-Andy Noel Jeune</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/#work">Work</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <article class="case">
+        <p class="case-crumbs"><a href="/#work"><span aria-hidden="true">←</span> All work</a></p>
+        <div class="project-kicker">
+          <span>05</span>
+          <p>Case study · Utility build · 2023</p>
+        </div>
+        <h1>spiderCrawler</h1>
+        <p class="case-summary">
+          A small Node.js scraper with big-project hygiene: Jest suite, supertest, CircleCI.
+        </p>
+        <ul class="tag-list" aria-label="spiderCrawler technologies">
+          <li>Node.js</li><li>Express</li><li>Cheerio</li><li>Jest</li><li>CircleCI</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/Marcandy/spiderCrawler">Repository <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="case-body">
+          <h2>Problem</h2>
+          <p>
+            I needed structured data out of pages that don't offer an API. A classic
+            scrape-and-serve job, small enough to do carelessly. The point of this repo is
+            that I didn't.
+          </p>
+
+          <h2>Approach</h2>
+          <p>
+            An Express service wrapping an axios and cheerio scraper, with the extraction logic
+            isolated in <code>src/scraper.js</code> and shared helpers in <code>src/utils.js</code>.
+          </p>
+
+          <h2>Key decisions</h2>
+          <ul>
+            <li>
+              <strong>Tests on a weekend-sized project.</strong> A Jest suite covers the scraper,
+              with supertest exercising the HTTP surface. Scrapers break silently, and a failing
+              test is how you find out before your consumer does.
+            </li>
+            <li>
+              <strong>CI from day one.</strong> CircleCI runs the suite on every push, with
+              <code>jest-junit</code> producing machine-readable reports the CI UI can surface.
+            </li>
+          </ul>
+
+          <h2>Result</h2>
+          <p>
+            A small tool that does its job, with tests and CI treated the same way I'd treat them
+            on a real product.
+          </p>
+
+          <h2>What I'd do next</h2>
+          <p>
+            Recorded HTML fixtures for fully deterministic tests, a politeness layer (rate
+            limiting, robots.txt respect) if it ever pointed at hosts I don't control, and a
+            README, as part of the same documentation uplift as the rest of my repos.
+          </p>
+        </div>
+
+        <nav class="case-nav" aria-label="More work">
+          <a href="/projects/crowdfunder/"><span aria-hidden="true">←</span> Previous: CrowdFunder</a>
+          <a href="/#work">All work <span aria-hidden="true">→</span></a>
+        </nav>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-identity">
+        <span class="mnj-mark mnj-mark-inverse" aria-hidden="true">
+          <span>M</span><span>N</span><span>J</span>
+        </span>
+        <p>© 2026 Marc-Andy Noel Jeune</p>
+      </div>
+      <p>Built with semantic HTML, custom CSS, and careful restraint.</p>
+    </footer>
+  </body>
+</html>
