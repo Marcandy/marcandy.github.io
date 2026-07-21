@@ -1,801 +1,512 @@
-<!DOCTYPE html>
-<html lang="en"> 
-
-<head>
-
+<!doctype html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Marc-Andy Noel Jeune | Full-Stack Software Engineer</title>
+    <meta
+      name="description"
+      content="Marc-Andy Noel Jeune is a full-stack software engineer with 10 years building production web and mobile applications with React, TypeScript, Node.js, Python, and AWS."
+    >
+    <meta name="author" content="Marc-Andy Noel Jeune">
+    <meta name="theme-color" content="#f3f0e8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://marcandy.github.io/">
+    <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
 
-    <title>marcandy.github.io</title>
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Marc-Andy Noel Jeune">
+    <meta property="og:title" content="Marc-Andy Noel Jeune | Full-Stack Software Engineer">
+    <meta
+      property="og:description"
+      content="I build production software from interface to infrastructure with React, TypeScript, Node.js, Python, and AWS."
+    >
+    <meta property="og:url" content="https://marcandy.github.io/">
+    <meta property="og:image" content="https://marcandy.github.io/assets/social-card.png">
+    <meta property="og:image:width" content="1730">
+    <meta property="og:image:height" content="909">
+    <meta
+      property="og:image:alt"
+      content="Marc-Andy Noel Jeune, full-stack engineer building production web and mobile products."
+    >
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marc-Andy Noel Jeune | Full-Stack Software Engineer">
+    <meta
+      name="twitter:description"
+      content="I build production software from interface to infrastructure."
+    >
+    <meta name="twitter:image" content="https://marcandy.github.io/assets/social-card.png">
+    <meta
+      name="twitter:image:alt"
+      content="Marc-Andy Noel Jeune, full-stack software engineer."
+    >
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <!-- Theme CSS -->
-    <link href="css/agency.min.css" rel="stylesheet">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Marc-Andy Noel Jeune",
+        "url": "https://marcandy.github.io/",
+        "email": "mailto:marcandy.nj@gmail.com",
+        "jobTitle": "Full-Stack Software Engineer",
+        "sameAs": [
+          "https://github.com/Marcandy",
+          "https://www.linkedin.com/in/marcandy/"
+        ],
+        "knowsAbout": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "Python",
+          "AWS",
+          "Web accessibility"
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Marc-Andy Noel Jeune</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Skills</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Projects</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About Me</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="https://www.marcandy.com">Blog</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-heading">Marc-Andy Noel Jeune</div>
-                <div class="intro-lead-in">Fullstack Web-Developer</div>
-                <a href="#services" class="page-scroll btn btn-xl">Explore my Works</a>
-            </div>
-        </div>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="MNJ, Marc-Andy Noel Jeune, home">
+        <span class="wordmark-full">Marc-Andy Noel Jeune</span>
+        <span class="wordmark-short" aria-hidden="true">MNJ</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Skills</h2>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                    <i class="devicon-javascript-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">Javascript</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                       <i class="devicon-react-original colored"></i>
-                    </span>
-                    <h4 class="service-heading">React</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-postgresql-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">PostgresSQL</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-angularjs-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">Angular</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                      <svg viewBox="0 0 128 128">
-<path fill="#83CD29" d="M114.325 80.749c-.29 0-.578-.076-.832-.224l-2.65-1.568c-.396-.221-.203-.3-.072-.345.528-.184.635-.227 1.198-.545.059-.033.136-.021.197.015l2.035 1.209c.074.041.179.041.246 0l7.937-4.581c.075-.042.122-.127.122-.215v-9.16c0-.09-.047-.173-.123-.219l-7.934-4.577c-.074-.042-.171-.042-.245 0l-7.933 4.578c-.076.045-.125.131-.125.218v9.16c0 .088.049.171.125.212l2.174 1.257c1.18.589 1.903-.105 1.903-.803v-9.045c0-.127.103-.228.23-.228h1.007c.125 0 .229.101.229.228v9.045c0 1.574-.857 2.477-2.35 2.477-.459 0-.82 0-1.828-.496l-2.081-1.198c-.515-.298-.832-.854-.832-1.448v-9.16c0-.595.317-1.15.832-1.446l7.937-4.587c.502-.283 1.169-.283 1.667 0l7.937 4.587c.514.297.833.852.833 1.446v9.16c0 .595-.319 1.148-.833 1.448l-7.937 4.582c-.252.147-.539.223-.834.223M116.778 74.438c-3.475 0-4.202-1.595-4.202-2.932 0-.126.103-.229.23-.229h1.026c.115 0 .21.082.228.194.154 1.045.617 1.572 2.718 1.572 1.671 0 2.383-.378 2.383-1.266 0-.512-.202-.891-2.8-1.146-2.172-.215-3.515-.694-3.515-2.433 0-1.601 1.35-2.557 3.612-2.557 2.543 0 3.801.883 3.96 2.777.006.064-.017.127-.06.176-.044.045-.104.073-.168.073h-1.031c-.107 0-.201-.075-.223-.179-.248-1.1-.848-1.451-2.479-1.451-1.825 0-2.037.637-2.037 1.112 0 .577.25.745 2.715 1.071 2.439.323 3.598.779 3.598 2.494.001 1.733-1.441 2.724-3.955 2.724"></path><path fill="#404137" d="M97.982 68.43c.313-.183.506-.517.506-.88v-2.354c0-.362-.192-.696-.506-.879l-8.364-4.856c-.315-.183-.703-.184-1.019-.002l-8.416 4.859c-.314.182-.508.517-.508.88v9.716c0 .365.196.703.514.884l8.363 4.765c.308.177.686.178.997.006l5.058-2.812c.161-.09.261-.258.262-.44.001-.184-.097-.354-.256-.445l-8.468-4.86c-.159-.091-.256-.259-.256-.44v-3.046c0-.182.097-.349.254-.439l2.637-1.52c.156-.091.35-.091.507 0l2.637 1.52c.158.091.255.258.255.439v2.396c0 .183.097.351.254.441.158.091.352.091.51-.001l5.039-2.932"></path><path fill="#83CD29" d="M88.984 67.974c.061-.034.135-.034.195 0l1.615.933c.06.035.097.1.097.169v1.865c0 .07-.037.134-.097.169l-1.615.932c-.06.035-.135.035-.195 0l-1.614-.932c-.061-.035-.098-.099-.098-.169v-1.865c0-.069.037-.134.098-.169l1.614-.933"></path><path fill="#404137" d="M67.083 71.854c0 .09-.048.174-.127.22l-2.89 1.666c-.079.046-.176.046-.254 0l-2.89-1.666c-.079-.046-.127-.13-.127-.22v-3.338c0-.09.049-.175.127-.221l2.89-1.668c.079-.047.176-.047.255 0l2.891 1.668c.078.046.126.131.126.221v3.338zm.781-24.716c-.157-.087-.349-.085-.505.006-.155.092-.251.258-.251.438v12.915c0 .126-.068.244-.177.308-.11.063-.246.063-.356 0l-2.108-1.215c-.314-.181-.701-.181-1.015 0l-8.418 4.858c-.315.182-.509.518-.509.881v9.719c0 .363.194.698.508.881l8.418 4.861c.314.182.702.182 1.017 0l8.42-4.861c.314-.183.508-.518.508-.881v-24.227c0-.368-.2-.708-.521-.888l-5.011-2.795"></path><path fill="#83CD29" d="M38.238 59.407c.314-.182.702-.182 1.016 0l8.418 4.857c.314.182.508.518.508.881v9.722c0 .363-.194.699-.508.881l-8.417 4.861c-.314.181-.702.181-1.017 0l-8.415-4.861c-.314-.182-.508-.518-.508-.881v-9.723c0-.362.194-.698.508-.88l8.415-4.857"></path><path fill="#404137" d="M22.93 65.064c0-.366-.192-.702-.508-.883l-8.415-4.843c-.144-.084-.303-.127-.464-.133h-.087c-.16.006-.32.049-.464.133l-8.416 4.843c-.313.181-.509.517-.509.883l.018 13.04c0 .182.095.351.254.439.156.094.349.094.505 0l5-2.864c.316-.188.509-.519.509-.882v-6.092c0-.364.192-.699.507-.881l2.13-1.226c.158-.093.332-.137.508-.137.174 0 .352.044.507.137l2.128 1.226c.315.182.509.517.509.881v6.092c0 .363.195.696.509.882l5 2.864c.157.094.353.094.508 0 .155-.089.252-.258.252-.439l.019-13.04"></path>
-</svg>
-                    </span>
-                    <h4 class="service-heading">Node</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                      <i class="devicon-mongodb-plain colored"></i>
-
-                    </span>
-                    <h4 class="service-heading">MongoDB</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-jquery-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">JQuery</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-gulp-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">GULP</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-css3-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">CSS</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-html5-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">HTML</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-bootstrap-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">Bootstrap</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-git-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">Git</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-wordpress-plain colored"></i>
-                    </span>
-                    <h4 class="service-heading">Wordpress</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x">
-                        <i class="devicon-amazonwebservices-original colored"></i>
-                    </span>
-                    <h4 class="service-heading">Amazon Web Services</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x" style="background-image: url('./img/icons/c.png'); background-size: cover">
-                       <!--<img-centered><img src="./img/icons/c.png"></img-centered>-->
-                    </span>
-                    <h4 class="service-heading">C#</h4>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="fa-stack fa-4x" style="background-image: url('./img/icons/net.png'); background-size: cover">
-                       <!--<img-centered><img src="./img/icons/c.png"></img-centered>-->
-                    </span>
-                    <h4 class="service-heading">.NET</h4>
-                </div>
-            </div>
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="availability"><span aria-hidden="true"></span> Open to software engineering roles</p>
+          <p class="eyebrow">Marc-Andy Noel Jeune · Full-stack software engineer</p>
+          <h1 id="page-title">Full-stack engineer building production web and mobile products.</h1>
+          <p class="hero-summary">
+            Ten years shipping production web and mobile applications. I work across React,
+            TypeScript, Node.js, Python, and AWS, with enterprise experience at Wells Fargo
+            and JCPenney.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button button-primary" href="assets/marc-andy-noel-jeune-resume.pdf" download>Download resume</a>
+            <a class="button button-secondary" href="mailto:marcandy.nj@gmail.com">Email me</a>
+          </div>
+          <div class="profile-links" aria-label="Professional profiles">
+            <a href="https://github.com/Marcandy">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/marcandy/">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-    </section>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">From great css design to fullstack development</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/projects/crowdfund.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>crowdFunder</h4>
-                        <!-- <p class="text-muted">rebuilt of Kickstarter</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/projects/Trellin.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Trellin-</h4>
-                        <!-- <p class="text-muted">Rebuilt of LinkedIn with Trello</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/projects/snowrider.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>SnowRider</h4>
-                        <!-- <p class="text-muted">App to Find and Search skiing/snowboarding resorts</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/projects/castgaming.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>CastGaming</h4>
-                        <!-- <p class="text-muted">A forum for top favorites strategy Games</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/projects/moviefav.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>MovieFav</h4>
-                        <!-- <p class="text-muted">AN app which allows you to search movies</p> -->
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/projects/arcade-game.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Arcade-Game</h4>
-                        <!-- <p class="text-muted">A rebuild of classic frogger arcade gmae</p> -->
-                    </div>
-                </div>
+        <aside class="hero-evidence" aria-label="Career highlights">
+          <p class="evidence-label">What I bring</p>
+          <div class="evidence-number">
+            <strong>10</strong>
+            <span>years building<br>production software</span>
+          </div>
+          <ul>
+            <li><span>01</span> Web and mobile delivery</li>
+            <li><span>02</span> Front end and backend systems</li>
+            <li><span>03</span> Accessibility and performance</li>
+            <li><span>04</span> Code review and mentorship</li>
+          </ul>
+        </aside>
+      </section>
 
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/projects/trashoverview.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>TrashTalks</h4>
-                        <!-- <p class="text-muted">A recycle Android App</p> -->
-                    </div>
-                </div>
+      <section class="proof-strip" aria-label="Core technologies and experience">
+        <p>React + TypeScript</p>
+        <p>Node.js + Python</p>
+        <p>AWS + Docker</p>
+        <p>Enterprise + consulting</p>
+      </section>
 
-                <div class="col-md-4 col-sm-7 portfolio-item">
-                    <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/projects/psca.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>PSCA</h4>
-                        <!-- <p class="text-muted">Wordpress site for startup</p> -->
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-7 portfolio-item">
-                    <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/projects/accumula.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Accumulacare</h4>
-                        <!-- <p class="text-muted">Non profit freelance client</p> -->
-                    </div>
-                </div>
-
-            </div>
+      <section class="work section-shell" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Four builds. Four different engineering problems.</h2>
+          <p>
+            I chose work that shows product judgment, automation, mobile development,
+            and full-stack delivery. Each story is grounded in code or experience from my resume.
+          </p>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
+        <div class="project-list">
+          <article class="project-card">
+            <div class="project-copy">
+              <div class="project-kicker">
+                <span>01</span>
+                <p>Product MVP · 2026</p>
+              </div>
+              <h3>Vera</h3>
+              <p class="project-summary">
+                A home care operations workspace that connects scheduled visits,
+                caregiver records, evidence review, and billing readiness.
+              </p>
+              <dl class="project-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Small agencies need one clear path from a caregiver visit to a billable record.</dd>
                 </div>
-            </div>
-            <div class="row " >
-                <div class="team-member text-center">
-                    <img src="img/portfolio/zoomp3.jpg" class="img-responsive img-circle" alt="" style="width: 25%">
-                    <h4>Marc-Andy Noel Jeune </h4>
-                    <p class="text-muted">Fullstack Developer</p>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://github.com/Marcandy"><i class="fa fa-github"></i></a>
-                        <li><a href="https://twitter.com/MarcandyNJ"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        </li>
-                        <li><a href="https://www.linkedin.com/in/marcandy/"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>React and Vite with a service layer that keeps domain rules out of UI components.</dd>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">
-                      My family and I relocated to the United States from Haiti when I was 15 years old. Growing up I was always fascinated by technology and passionate about researching the newest tech on the horizon. For the past coupIe years, I have dappled with freelance wordpress projects for local businesses.  During my freelance experience I saw first hand how a good website could improve my clients' businesses and outreach.
-                      <br>
-                      So I wanted to take my web development skills to the next level and decided to attend DevMountain, a highly rated coding bootcamp in the Greater Salt Lake area. It was a wonderful opportunity to push myself to learn new coding technologies and  libraries. My ability to effectively grasp new frameworks can be seen through my projects. Currently looking for a new opportunity, feel free to connect with me.
-                    </p>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>Derive missing evidence and work status from records instead of storing duplicate flags.</dd>
                 </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>A live portfolio MVP with administrator and phone-width caregiver flows.</dd>
+                </div>
+              </dl>
+              <ul class="tag-list" aria-label="Vera technologies">
+                <li>React</li>
+                <li>Vite</li>
+                <li>CSS Modules</li>
+                <li>Service layer</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://vera-homecare.vercel.app">Live demo <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/Marcandy/vera">Repository <span aria-hidden="true">↗</span></a>
+              </div>
             </div>
+
+            <div class="project-visual vera-visual" role="img" aria-label="Vera visit pipeline interface preview">
+              <div class="visual-window">
+                <div class="visual-toolbar"><span></span><span></span><span></span><b>VERA / VISITS</b></div>
+                <div class="vera-body">
+                  <div class="vera-sidebar">
+                    <strong>Good morning.</strong>
+                    <span>Dashboard</span><span class="active">Visits</span><span>Billing</span><span>Caregivers</span>
+                  </div>
+                  <div class="vera-main">
+                    <div class="vera-title"><b>Today's visits</b><small>4 records</small></div>
+                    <div class="vera-row"><span class="status ready">Ready</span><b>Maria / Helen</b><small>8:00 AM</small></div>
+                    <div class="vera-row"><span class="status review">Review</span><b>James / Andre</b><small>9:30 AM</small></div>
+                    <div class="vera-row"><span class="status active-status">Active</span><b>Ruth / Taylor</b><small>11:00 AM</small></div>
+                    <div class="vera-panel"><small>VISIT EVIDENCE</small><b>3 of 4 items verified</b><i></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card-reverse">
+            <div class="project-copy">
+              <div class="project-kicker">
+                <span>02</span>
+                <p>Automation system · Consulting</p>
+              </div>
+              <h3>OpenClaw automation pipeline</h3>
+              <p class="project-summary">
+                A self-hosted agent workflow that turns incoming items into ranked,
+                reviewable actions and documents.
+              </p>
+              <dl class="project-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>High-volume inputs needed consistent triage without sending every task to the most expensive model.</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>TypeScript and Node.js stages ingest, score, rank, and route work to messaging digests.</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>Use cost-tiered models for different stages and require human approval before document delivery.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>Automated ranking and document generation with an explicit review boundary.</dd>
+                </div>
+              </dl>
+              <ul class="tag-list" aria-label="OpenClaw pipeline technologies">
+                <li>TypeScript</li>
+                <li>Node.js</li>
+                <li>LLM routing</li>
+                <li>Human approval</li>
+              </ul>
+              <p class="private-note">Consulting system. Code is private.</p>
+            </div>
+
+            <div class="project-visual pipeline-visual" role="img" aria-label="OpenClaw staged automation pipeline preview">
+              <div class="pipeline-head">
+                <span>PIPELINE / RUN 1842</span><b>Approval required</b>
+              </div>
+              <ol class="pipeline-steps">
+                <li><span>01</span><div><b>Ingest</b><small>12 items from 3 sources</small></div><i>Done</i></li>
+                <li><span>02</span><div><b>Score</b><small>Fast model · structured output</small></div><i>Done</i></li>
+                <li><span>03</span><div><b>Rank</b><small>4 items above threshold</small></div><i>Done</i></li>
+                <li class="pipeline-current"><span>04</span><div><b>Review</b><small>Human decision before delivery</small></div><i>Wait</i></li>
+                <li><span>05</span><div><b>Deliver</b><small>Digest + generated document</small></div><i>Locked</i></li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-copy">
+              <div class="project-kicker">
+                <span>03</span>
+                <p>Mobile prototype</p>
+              </div>
+              <h3>SpotiClone</h3>
+              <p class="project-summary">
+                A React Native music application with album browsing, app navigation,
+                and media playback controls.
+              </p>
+              <dl class="project-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Playback controls and progress needed to remain available while moving between mobile views.</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>Build the client in React Native and TypeScript with Expo Audio and React Navigation.</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>Mount one player beside the navigation root and update progress from playback status events.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>A typed mobile prototype with album views, play and pause controls, and live progress.</dd>
+                </div>
+              </dl>
+              <ul class="tag-list" aria-label="SpotiClone technologies">
+                <li>React Native</li>
+                <li>TypeScript</li>
+                <li>Expo Audio</li>
+                <li>React Navigation</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Marcandy/spoticlone">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+
+            <div class="project-visual music-visual" role="img" aria-label="SpotiClone mobile player preview">
+              <div class="music-screen">
+                <div class="music-top"><span>9:41</span><span>•••</span></div>
+                <div class="album-art"><span>STAY<br>CURIOUS</span></div>
+                <small>PLAYLIST</small>
+                <h4>Deep Focus</h4>
+                <p>Built for long coding sessions.</p>
+                <div class="song-row"><span>01</span><b>Signal Path</b><small>3:42</small></div>
+                <div class="song-row"><span>02</span><b>Static Light</b><small>4:08</small></div>
+                <div class="player-row"><span>◼</span><div><b>Signal Path</b><i></i></div><strong>Ⅱ</strong></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card-reverse">
+            <div class="project-copy">
+              <div class="project-kicker">
+                <span>04</span>
+                <p>Full-stack web application</p>
+              </div>
+              <h3>CrowdFunder</h3>
+              <p class="project-summary">
+                A crowdfunding application with campaign creation, authentication,
+                project discovery, and a Stripe contribution flow.
+              </p>
+              <dl class="project-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Campaign owners needed a multi-step publishing flow and backers needed a clear way to contribute.</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>React and Redux on the client with Express, PostgreSQL, Google sign-in, Stripe, and Amazon S3.</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>Keep request controllers and SQL operations separate so each API path had one clear responsibility.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>A complete early-career full-stack build covering identity, data, uploads, and payments.</dd>
+                </div>
+              </dl>
+              <ul class="tag-list" aria-label="CrowdFunder technologies">
+                <li>React</li>
+                <li>Redux</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
+                <li>Stripe</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Marcandy/crowdFunder">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+
+            <div class="project-visual fund-visual" role="img" aria-label="CrowdFunder campaign interface preview">
+              <div class="fund-card">
+                <div class="fund-image"><span>COMMUNITY<br>WORKSHOP</span></div>
+                <div class="fund-content">
+                  <small>PHILADELPHIA · COMMUNITY</small>
+                  <h4>Tools and space for neighborhood makers</h4>
+                  <div class="fund-progress"><i></i></div>
+                  <div class="fund-stats"><p><b>$18,420</b><span>pledged</span></p><p><b>74%</b><span>funded</span></p><p><b>12</b><span>days left</span></p></div>
+                  <button type="button" tabindex="-1">Back this project</button>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
-    </section>
+      </section>
 
-
-    <!-- Clients Aside -->
-    <!-- <aside class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-            </div>
+      <section class="experience section-shell" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading experience-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">Production work across consulting, finance, and retail.</h2>
+          <p>
+            I have shipped software in small delivery teams and large regulated organizations.
+            The common thread is end-to-end ownership and steady attention to quality.
+          </p>
         </div>
-    </aside> -->
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Me</h2>
-                    <h3 class="section-heading">marcandy.nj@gmail.com</h3>
-                    <h4 class="section-heading"><a href="/img/resume.pdf">Resume</a></h4>
-                </div>
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-meta">
+              <p>2021 · Present</p>
+              <span>Remote</span>
             </div>
-            <div class="row">
-
-                  <ul class="list-inline social-buttons text-center">
-                      <li><a href="https://github.com/Marcandy"><i class="fa fa-github"></i></a>
-                      </li>
-                      <li><a href="https://twitter.com/MarcandyNJ"><i class="fa fa-twitter"></i></a>
-                      </li>
-                      <li><a href="https://www.linkedin.com/in/marcandy/"><i class="fa fa-linkedin"></i></a>
-                      </li>
-                  </ul>
-
+            <div class="experience-role">
+              <p>Lotnivo</p>
+              <h3>Software Consultant</h3>
             </div>
+            <ul>
+              <li>Architect and deliver web and mobile applications with React, Next.js, React Native, Node.js, Python, and TypeScript.</li>
+              <li>Design REST and GraphQL APIs and connect relational data with AWS services.</li>
+              <li>Build tested, accessible interfaces and mentor developers through pairing and code review.</li>
+            </ul>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <p>2019 · 2020</p>
+              <span>Charlotte, NC</span>
+            </div>
+            <div class="experience-role">
+              <p>Wells Fargo</p>
+              <h3>Software Engineer</h3>
+            </div>
+            <ul>
+              <li>Developed internal financial applications inside a large, regulated, multi-team codebase.</li>
+              <li>Implemented accessibility and internationalization across web pages, expanding the usable audience by over 25%.</li>
+              <li>Connected server-side data to component-driven interfaces for core financial workflows.</li>
+            </ul>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-meta">
+              <p>2017 · 2019</p>
+              <span>Plano, TX</span>
+            </div>
+            <div class="experience-role">
+              <p>JCPenney</p>
+              <h3>Software Engineer</h3>
+            </div>
+            <ul>
+              <li>Built front-end features and integrated backend services for a retail loyalty platform serving millions of users.</li>
+              <li>Helped move a legacy monolith toward modular, component-driven architecture.</li>
+              <li>Improved performance under heavy traffic and handled production troubleshooting.</li>
+            </ul>
+          </article>
         </div>
-    </section>
+      </section>
+
+      <section class="skills" id="skills" aria-labelledby="skills-title">
+        <div class="section-shell skills-shell">
+          <div class="skills-intro">
+            <p class="eyebrow">Skills</p>
+            <h2 id="skills-title">A practical stack for shipping the whole feature.</h2>
+            <p>
+              My strongest work is in TypeScript and JavaScript applications with React on the front end
+              and Node.js or Python services behind them.
+            </p>
+          </div>
+
+          <div class="skill-groups">
+            <article>
+              <p>Front end + mobile</p>
+              <ul>
+                <li>React</li><li>Next.js</li><li>React Native</li><li>TypeScript</li>
+                <li>JavaScript</li><li>Angular</li><li>Redux</li><li>HTML5</li><li>CSS3</li>
+              </ul>
+            </article>
+            <article>
+              <p>Backend + data</p>
+              <ul>
+                <li>Node.js</li><li>Express</li><li>Python</li><li>Django</li><li>Java</li><li>Spring Boot</li>
+                <li>REST</li><li>GraphQL</li><li>SQL</li><li>Relational databases</li>
+              </ul>
+            </article>
+            <article>
+              <p>Cloud + delivery</p>
+              <ul>
+                <li>AWS</li><li>Docker</li><li>GitHub Actions</li><li>CI/CD</li>
+                <li>CloudFormation</li><li>Git</li><li>Linux</li>
+              </ul>
+            </article>
+            <article>
+              <p>Quality + collaboration</p>
+              <ul>
+                <li>Jest</li><li>React Testing Library</li><li>Playwright</li><li>Cypress</li>
+                <li>WCAG</li><li>Code review</li><li>Mentorship</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section-shell" aria-labelledby="about-title">
+        <div class="about-number" aria-hidden="true">10</div>
+        <div class="about-copy">
+          <p class="eyebrow">How I work</p>
+          <h2 id="about-title">Clear boundaries. Useful interfaces. Reviewable code.</h2>
+          <p>
+            I work well where product decisions and technical decisions meet. My background covers
+            regulated finance, retail at ecommerce scale, and independent consulting. I like systems
+            with clear ownership, interface states that explain themselves, and code another engineer
+            can change without guesswork.
+          </p>
+          <p>
+            I also mentor developers through pairing and code review. Good delivery includes leaving
+            the team with a stronger system and a shared understanding of how it works.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-shell contact-shell">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Need an engineer who can own the whole feature?</h2>
+          <p>
+            I am looking for full-stack software engineering roles where I can build across the stack,
+            improve system quality, and support other developers.
+          </p>
+          <div class="contact-actions">
+            <a class="contact-email" href="mailto:marcandy.nj@gmail.com">marcandy.nj@gmail.com <span aria-hidden="true">↗</span></a>
+            <a class="button contact-resume" href="assets/marc-andy-noel-jeune-resume.pdf" download>Download resume</a>
+          </div>
+          <div class="contact-links">
+            <a href="https://github.com/Marcandy">GitHub</a>
+            <a href="https://www.linkedin.com/in/marcandy/">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <span class="copyright">Copyright &copy; Marcandy 2017</span>
-                </div>
-                <!-- <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div> -->
-                <div class="col-md-6">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      <p>© 2026 Marc-Andy Noel Jeune</p>
+      <p>Built with semantic HTML, custom CSS, and careful restraint.</p>
     </footer>
-
-    <!-- Portfolio Modals -->
-    <!-- Use the modals below to showcase details about your portfolio projects! -->
-
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>CrowdFunder</h2>
-                                <p class="item-intro text-muted">A crowdfunding app similar to Kickstarter built around React/Redux, PostgresSQL, Stripe</p>
-                                <img class="img-responsive img-centered" src="img/crowd1.png" alt="">
-                                <img class="img-responsive img-centered" src="img/crowd2.png" alt="">
-                                <img class="img-responsive img-centered" src="img/crowd3.png" alt="">
-                                <img class="img-responsive img-centered" src="img/crowd4.png" alt="">
-                                <img class="img-responsive img-centered" src="img/crowd5.png" alt="">
-                                <img class="img-responsive img-centered" src="img/crowd6.png" alt="">
-                                <p>This project goal was to rebuilt the main feature of kickstarter in React/Redux.
-                                  It took lot of attention to details to make a mulipage form replica where user can creat their own project.
-                                  <br>
-                                  Key technologies  used: stripe.js for the donation and reward, google auth, postgresSQL in the backend, and semantic-ui.
-
-                                </p>
-                                <p>Live Preview  <a href="https://crowdfunder-app.herokuapp.com">here</a>.</p>
-                                <p>Github <a href="https://github.com/Marcandy/crowdFunder">here</a>.</p>
-                                <p>Date completed Febuary 2016</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <h2>Trellin</h2>
-                                <p class="item-intro text-muted">A group project combining the core feature of Linked and Trello together</p>
-                                <img class="img-responsive img-centered" src="img/trel1.png" alt="">
-                                <img class="img-responsive img-centered" src="img/trel2.png" alt="">
-                                <img class="img-responsive img-centered" src="img/trel3.png" alt="">
-                                <img class="img-responsive img-centered" src="img/trel4.png" alt="">
-                                <img class="img-responsive img-centered" src="img/trel5.png" alt="">
-                                <img class="img-responsive img-centered" src="img/trel6.png" alt="">
-                                <p>This was anbitious of taking the core feature of LinkedIn: timelin, profile view, and connection while adding the ability for the user to create a Trello list and card.
-                                  Major technology used include React, Redux, postgresSQL, amazonS3, React drag and drop.
-                                  On major challenge was integretin the Trello into LinkkedIn through  a feature called pinlist which  allows the user to pin to his/her Trello board a post from the timeline.
-
-                                </p>
-                                <p>Live Preview  <a href="http://trellin-.herokuapp.com/#/">here</a>.</p>
-                                <p>Github <a href="https://github.com/TrellinDm/Trellin-">here</a>.</p>
-                                <p>Date completed Febuary 2016</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>Snwowrider</h2>
-                                <p class="item-intro text-muted">Search snowboarding//skiing resort</p>
-                                <img class="img-responsive img-centered" src="img/sno1.png" alt="">
-                                <img class="img-responsive img-centered" src="img/snow2.png" alt="">
-                                <img class="img-responsive img-centered" src="img/snow3.png" alt="">
-                                <img class="img-responsive img-centered" src="img/snow4.png" alt="">
-                                <img class="img-responsive img-centered" src="img/snow5.png" alt="">
-                                <img class="img-responsive img-centered" src="img/snow6.png" alt="">
-                                <p>An angular app which allows you to find skiing/snowboarding resorts and renders them through google maps api.
-                                  *key css/design feature include slideing AoS JQuery Library. Materialize css as ui-helper and parallex animation.
-                                  *key technology user include google masp api in conjuction  with promise based resful api methodes
-
-                                </p>
-                                <p>Live Preview  <a href="https://snowrider.herokuapp.com/">here</a>.</p>
-                                <p>Github <a href="https://github.com/Marcandy/snowRider">here</a>.</p>
-                                <p>Date completed December 2016</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                          <div class="modal-body">
-                              <!-- Project Details Go Here -->
-                              <h2>castgaming</h2>
-                              <p class="item-intro text-muted">A Forum for my Favorites Strategy Gmaes</p>
-                              <img class="img-responsive img-centered" src="img/cast1.png" alt="">
-                              <img class="img-responsive img-centered" src="img/cast2.png" alt="">
-                              <img class="img-responsive img-centered" src="img/cast3.png" alt="">
-                              <img class="img-responsive img-centered" src="img/cast4.png" alt="">
-                              <img class="img-responsive img-centered" src="img/cast5.png" alt="">
-                              <img class="img-responsive img-centered" src="img/cast6.png" alt="">
-                              <p>A gaming forum for my top online strategy games: Dota 2, World of Tanks, Smite, HearthStone, Overwatch.
-Built with Angular, Node.js, Mongoose, socket.io and Bootstrap.
-Include facebook auth login for user model , chat-box with socket.io, embed youtube-video
-Five mongoose model: created for each game as categorie-threadlist-postview-reply</p>
-                              <!-- <p>Live Preview  <a href="https://marcandy.github.io/movieFav/#/">here</a>.</p> -->
-                              <p>Github <a href="https://github.com/Marcandy/castGaming">here</a>.</p>
-                              <p>Date completed November 2016</p>
-                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="modal-body">
-                                <!-- Project Details Go Here -->
-                                <h2>MovieFav</h2>
-                                <p class="item-intro text-muted">Moviedb Datase Search App</p>
-                                <img class="img-responsive img-centered" src="img/movieFav1.png" alt="">
-                                <img class="img-responsive img-centered" src="img/movieFav2.png" alt="">
-                                <img class="img-responsive img-centered" src="img/movieFav3.png" alt="">
-                                <p>A movie app that allows you to set search from the Movie Database and put it in your favorites.
-                                Moviedb API request wich request dota movies by title keyword
-                                Using bootstrap to create a grid of images which go to another view by</p>
-                                <p>Live Preview  <a href="https://marcandy.github.io/movieFav/#/">here</a>.</p>
-                                <p>Github <a href="https://marcandy.github.io/movieFav/#/">here</a>.</p>
-                                <p>Date completed October 2016</p>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                          <div class="modal-body">
-                              <!-- Project Details Go Here -->
-                              <h2>Frogger Game</h2>
-                              <p class="item-intro text-muted">A Rebuild of Classic Arcade Game</p>
-                              <img class="img-responsive img-centered" src="img/frogger1.png" alt="">
-                              <img class="img-responsive img-centered" src="img/froger2.png" alt="">
-                              <p>Recreated a frogger game with .
-                                Technologies: Object Oriented JavaScript and HTML5 Canvas</p>
-                              <p>Live Preview <a href="https://marcandy.github.io/frontend-arcade-game/">here</a>.</p>
-                              <p>Date completed September 2016</p>
-                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 7 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                          <div class="modal-body">
-                              <!-- Project Details Go Here -->
-                              <h2>TrashTalks</h2>
-                              <p class="item-intro text-muted">An Android app which promotes Recyling</p>
-                              <img class="img-responsive img-centered" src="img/trash1.png" alt="">
-                              <img class="img-responsive img-centered" src="img/trash2.png" alt="">
-                              <p>A hackathon group project where we used  the camera on a computer to represent the trashcan. Then we sent this picture to IBM Watson. Watson determines what is being recycled and calculates the number of points the items represent. Then Watson sends the information to ZXing (QR generator). We use an android app to scan the QR code. The App send the information to scoreboard/website (Heroku) via a database.</p>
-                              <p>Live Preview <a href="https://marcandy.github.io/frontend-arcade-game/">here</a>.</p>
-                              <p>Date completed April 2017</p>
-                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 8 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                          <div class="modal-body">
-                              <!-- Project Details Go Here -->
-                              <h2>PSCA</h2>
-                              <p class="item-intro text-muted"></p>
-                              
-                              <p> Build Website from scratch for freelance. Helped establish online presence and improved revenue by 200%</p>
-                              <p>Live Preview <a href="http://www.pscaonline.org/">here</a>.</p>
-                              <p>Date completed November 2015</p>
-                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 9 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                          <div class="modal-body">
-                              <!-- Project Details Go Here -->
-                              <h2>Accumulacare</h2>
-                              <p class="item-intro text-muted"></p>
-                            
-                              <p>Helped Non-profit business build site with wordpress.</p>
-                              <p>Live Preview <a href="http://www.accumulacare.org/">here</a>.</p>
-                              <p>Date completed March 2016</p>
-                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/agency.min.js"></script>
-
-</body>
-
+  </body>
 </html>
