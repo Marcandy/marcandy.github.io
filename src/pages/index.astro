@@ -1,13 +1,25 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
 import { site } from '../data/site';
+
+const projects = (await getCollection('projects'))
+  .filter((p) => p.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Base title={`${site.name} — ${site.role}`} description={site.description}>
   <Header />
   <main id="main">
     <Hero />
+    <Section id="projects" title="Featured Projects">
+      <div class="grid gap-4 md:grid-cols-2">
+        {projects.map((p, i) => <ProjectCard project={p} featured={i === 0} />)}
+      </div>
+    </Section>
   </main>
 </Base>
