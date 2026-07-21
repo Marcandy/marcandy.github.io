@@ -9,6 +9,8 @@ links:
   repo: "https://github.com/Marcandy/crowdFunder"
 image: "/images/projects/crowdfunder.webp"
 imageAlt: "CrowdFunder campaign listing page with funding progress bars"
+imageWidth: 1200
+imageHeight: 675
 ---
 
 ## Problem
