@@ -16,5 +16,6 @@ Open `http://localhost:4173`.
 
 - The landing page is `index.html`; each case study lives in `projects/<name>/index.html`.
 - When the resume changes, replace both copies: `assets/marc-andy-noel-jeune-resume.pdf` and `img/resume.pdf`.
+- Keep the homepage experience, skills, community contributions, and project results in sync with the resume.
 - `npm run check` validates every page (links, ids, meta, copy rules) and runs in CI before each deploy.
 - Pushing to `master` publishes automatically.
