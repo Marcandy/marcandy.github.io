@@ -11,22 +11,27 @@ rmSync(dist, { recursive: true, force: true });
 mkdirSync(client, { recursive: true });
 mkdirSync(server, { recursive: true });
 
-for (const file of ["index.html", "styles.css", ".nojekyll"]) {
+for (const file of ["index.html", "404.html", "styles.css", "robots.txt", "sitemap.xml", ".nojekyll"]) {
   cpSync(resolve(root, file), resolve(client, file));
 }
-cpSync(resolve(root, "assets"), resolve(client, "assets"), { recursive: true });
+for (const directory of ["assets", "projects", "img"]) {
+  cpSync(resolve(root, directory), resolve(client, directory), { recursive: true });
+}
 
 const worker = `export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname === "/") url.pathname = "/index.html";
+    if (url.pathname.endsWith("/")) url.pathname += "index.html";
+    else if (new RegExp("^/projects/[^/.]+$").test(url.pathname)) url.pathname += "/index.html";
 
     const response = await env.ASSETS.fetch(new Request(url, request));
     if (response.status !== 404) return response;
 
-    return new Response("Not found", {
+    url.pathname = "/404.html";
+    const notFound = await env.ASSETS.fetch(new Request(url, request));
+    return new Response(notFound.body, {
       status: 404,
-      headers: { "content-type": "text/plain; charset=utf-8" },
+      headers: notFound.headers,
     });
   },
 };
