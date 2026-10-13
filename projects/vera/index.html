@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vera case study | Marc-Andy Noel Jeune</title>
+    <meta
+      name="description"
+      content="How I built Vera, a home care operations workspace modeled on Electronic Visit Verification: the problem, the architecture, the key decisions, and the result."
+    >
+    <meta name="author" content="Marc-Andy Noel Jeune">
+    <meta name="theme-color" content="#f3f0e8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://marcandy.github.io/projects/vera/">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Marc-Andy Noel Jeune">
+    <meta property="og:title" content="Vera case study | Marc-Andy Noel Jeune">
+    <meta property="og:description" content="One clean flow from scheduled home-care visit to billable record, modeled on federally required Electronic Visit Verification.">
+    <meta property="og:url" content="https://marcandy.github.io/projects/vera/">
+    <meta property="og:image" content="https://marcandy.github.io/assets/social-card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vera case study | Marc-Andy Noel Jeune">
+    <meta name="twitter:image" content="https://marcandy.github.io/assets/social-card.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="MNJ, Marc-Andy Noel Jeune, home">
+        <span class="mnj-mark mnj-mark-header" aria-hidden="true">
+          <span>M</span><span>N</span><span>J</span>
+        </span>
+        <span class="wordmark-full">Marc-Andy Noel Jeune</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/#work">Work</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <article class="case">
+        <p class="case-crumbs"><a href="/#work"><span aria-hidden="true">←</span> All work</a></p>
+        <div class="project-kicker">
+          <span>01</span>
+          <p>Case study · Product MVP · 2026</p>
+        </div>
+        <h1>Vera</h1>
+        <p class="case-summary">
+          One clean flow from scheduled home-care visit to billable record, modeled on
+          federally required Electronic Visit Verification.
+        </p>
+        <ul class="tag-list" aria-label="Vera technologies">
+          <li>React</li><li>Vite</li><li>React Router</li><li>CSS Modules</li><li>Vercel</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://vera-homecare.vercel.app">Live demo <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Marcandy/vera">Repository <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <figure class="case-figure">
+          <div class="visual-window">
+            <div class="visual-toolbar"><span></span><span></span><span></span><b>VERA / LIVE APP</b></div>
+            <img
+              class="visual-shot"
+              src="/assets/vera-dashboard.webp"
+              alt="Vera admin dashboard listing the day's home-care visits with needs-review, ready-to-bill, and in-progress statuses"
+              width="1200"
+              height="750"
+            >
+          </div>
+          <figcaption>The live admin dashboard: every visit carries its pipeline status, needs-review first.</figcaption>
+        </figure>
+
+        <div class="case-body">
+          <h2>Problem</h2>
+          <p>
+            Small home-care agencies mostly run on software that is broad, expensive, and
+            disconnected. Interviews with agency owners in Philadelphia surfaced three concrete
+            pain points: managing caregiver onboarding documents, knowing when caregivers are
+            actually with patients, and collecting patient signatures. On top of that,
+            Medicaid-funded home care is federally required to use Electronic Visit Verification
+            (EVV) under the 21st Century Cures Act, so the evidence trail isn't optional.
+            It's the product.
+          </p>
+          <p>
+            Vera is a workspace built around one flow: a scheduled visit becomes a verified,
+            evidence-backed record, and the moment it's verified, the claim is ready to submit.
+          </p>
+
+          <h2>My role</h2>
+          <p>Sole designer and developer: the owner interviews, the UX, the front-end architecture, and delivery.</p>
+
+          <h2>Approach</h2>
+          <p>
+            Two surfaces for two very different users. Administrators get a dashboard with
+            needs-review visits first, visit detail with the full evidence trail, billing with
+            one-click mock claim submission, and a caregiver roster with per-caregiver onboarding
+            checklists. Caregivers get a phone-width surface with one primary action per screen:
+            check in, then check out with an assessment and the patient's signature.
+          </p>
+          <p>
+            Underneath is a visit pipeline (<code>scheduled → in progress → ready to bill →
+            billed</code>, with a <code>needs review</code> detour). Every transition has a cause,
+            and the rules live in a service layer of domain verbs (<code>checkInVisit</code>,
+            <code>checkOutVisit</code>, <code>supplyEvidence</code>, <code>submitClaim</code>),
+            never in components.
+          </p>
+
+          <h2>Key decisions</h2>
+          <ul>
+            <li>
+              <strong>The service layer is the backend seam.</strong> Components never import data
+              directly; they call async services with realistic latency. A real API can replace the
+              mock internals without changing a single component. The seam was designed before the
+              backend exists.
+            </li>
+            <li>
+              <strong>No admin override for flagged visits.</strong> A visit is billable only when
+              all four pieces of evidence exist: check-in time, check-out time, assessment,
+              signature. The only way to clear a flag is to supply the missing evidence, because
+              clicking a button does not create a signature. In a compliance domain, the tempting
+              "let the admin fix it" button is the wrong product.
+            </li>
+            <li>
+              <strong>System-stamped timestamps, never typed.</strong> A typed timestamp would be
+              fabricated evidence; the system records the moment the event happens.
+            </li>
+            <li>
+              <strong>Derived state over stored flags.</strong> The missing-evidence panel and each
+              caregiver's cleared-to-work badge are computed from the record at render time, so the
+              UI can never disagree with the data.
+            </li>
+            <li>
+              <strong>No UI libraries.</strong> React Router and CSS Modules only. The bundle stays
+              lean and every pixel is explainable in review.
+            </li>
+          </ul>
+
+          <h2>Result</h2>
+          <p>
+            Live on Vercel, developed through 24 merged pull requests with a scripted 13-scenario
+            manual QA pass before each merge. The README states the scope honestly: a portfolio MVP
+            inspired by EVV. It is not certified EVV software, makes no HIPAA claims, and keeps
+            data in memory by design.
+          </p>
+
+          <h2>What I'd do next</h2>
+          <p>
+            Persistence (localStorage first, then a real API behind the same service contracts),
+            automated tests (Vitest and React Testing Library for the service layer, Playwright for
+            the visit flow end to end), real browser geolocation at check-in, and real claim
+            formats (837/835) against a clearinghouse sandbox.
+          </p>
+        </div>
+
+        <nav class="case-nav" aria-label="More work">
+          <span></span>
+          <a href="/projects/openclaw/">Next: OpenClaw automation pipeline <span aria-hidden="true">→</span></a>
+        </nav>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-identity">
+        <span class="mnj-mark mnj-mark-inverse" aria-hidden="true">
+          <span>M</span><span>N</span><span>J</span>
+        </span>
+        <p>© 2026 Marc-Andy Noel Jeune</p>
+      </div>
+      <p>Built with semantic HTML, custom CSS, and careful restraint.</p>
+    </footer>
+  </body>
+</html>

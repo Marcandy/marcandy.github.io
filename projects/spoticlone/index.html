@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SpotiClone case study | Marc-Andy Noel Jeune</title>
+    <meta
+      name="description"
+      content="A Spotify-style mobile player built in React Native and TypeScript: why it exists, how the player state is structured, and what it proves."
+    >
+    <meta name="author" content="Marc-Andy Noel Jeune">
+    <meta name="theme-color" content="#f3f0e8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://marcandy.github.io/projects/spoticlone/">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Marc-Andy Noel Jeune">
+    <meta property="og:title" content="SpotiClone case study | Marc-Andy Noel Jeune">
+    <meta property="og:description" content="A Spotify-style mobile player in React Native and TypeScript, with a Node.js backend.">
+    <meta property="og:url" content="https://marcandy.github.io/projects/spoticlone/">
+    <meta property="og:image" content="https://marcandy.github.io/assets/social-card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpotiClone case study | Marc-Andy Noel Jeune">
+    <meta name="twitter:image" content="https://marcandy.github.io/assets/social-card.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="MNJ, Marc-Andy Noel Jeune, home">
+        <span class="mnj-mark mnj-mark-header" aria-hidden="true">
+          <span>M</span><span>N</span><span>J</span>
+        </span>
+        <span class="wordmark-full">Marc-Andy Noel Jeune</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/#work">Work</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <article class="case">
+        <p class="case-crumbs"><a href="/#work"><span aria-hidden="true">←</span> All work</a></p>
+        <div class="project-kicker">
+          <span>03</span>
+          <p>Case study · Mobile prototype · 2021</p>
+        </div>
+        <h1>SpotiClone</h1>
+        <p class="case-summary">
+          A Spotify-style mobile player in React Native and TypeScript, with a Node.js backend.
+        </p>
+        <ul class="tag-list" aria-label="SpotiClone technologies">
+          <li>React Native</li><li>Expo</li><li>TypeScript</li><li>Node.js</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/Marcandy/spoticlone">Repository <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <div class="case-body">
+          <h2>Problem</h2>
+          <p>
+            After years of enterprise React on the web, I wanted real depth on mobile. Not a todo
+            app, but something with the hard parts: media playback, navigation state, and a UI
+            users already have opinions about. Cloning Spotify's player set a concrete,
+            unforgiving bar.
+          </p>
+
+          <h2>Approach</h2>
+          <p>
+            React Native on Expo with TypeScript throughout, structured the way I'd structure a
+            production app: <code>screens/</code>, <code>components/</code>, <code>hooks/</code>,
+            and typed navigation, with a Node.js backend behind playlist management, playback,
+            and streaming.
+          </p>
+
+          <h2>Key decisions</h2>
+          <ul>
+            <li>
+              <strong>TypeScript-first, in 2021.</strong> Typed React Native wasn't the default
+              choice then. It paid off every time I refactored the player flow, and the codebase is
+              essentially all TypeScript.
+            </li>
+            <li>
+              <strong>Player state in hooks.</strong> Play/pause and track-change behavior live in
+              dedicated hooks driven by effects, so the player widget stays a simple component and
+              the tricky lifecycle logic sits in one place.
+            </li>
+            <li>
+              <strong>Pull requests, even solo.</strong> The app was built through 15 merged PRs:
+              branch, review the diff, merge. I kept the habit even without teammates, because it
+              keeps the work reviewable.
+            </li>
+          </ul>
+
+          <h2>Result</h2>
+          <p>
+            A working Spotify-style player: playlists, media playback, and streaming from the Node
+            backend. Built as a 2021 personal project and labeled as such. It's here because mobile
+            is part of my stack, and this is the public evidence for it.
+          </p>
+
+          <h2>What I'd do next</h2>
+          <p>
+            A real README and a short screen recording (that uplift is underway), an Expo SDK
+            upgrade, and component tests for the player hooks.
+          </p>
+        </div>
+
+        <nav class="case-nav" aria-label="More work">
+          <a href="/projects/openclaw/"><span aria-hidden="true">←</span> Previous: OpenClaw</a>
+          <a href="/projects/crowdfunder/">Next: CrowdFunder <span aria-hidden="true">→</span></a>
+        </nav>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-identity">
+        <span class="mnj-mark mnj-mark-inverse" aria-hidden="true">
+          <span>M</span><span>N</span><span>J</span>
+        </span>
+        <p>© 2026 Marc-Andy Noel Jeune</p>
+      </div>
+      <p>Built with semantic HTML, custom CSS, and careful restraint.</p>
+    </footer>
+  </body>
+</html>

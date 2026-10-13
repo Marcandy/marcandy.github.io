@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CrowdFunder case study | Marc-Andy Noel Jeune</title>
+    <meta
+      name="description"
+      content="A Kickstarter-style crowdfunding platform from 2017: React and Redux, PostgreSQL, Stripe, S3, and the decisions behind them."
+    >
+    <meta name="author" content="Marc-Andy Noel Jeune">
+    <meta name="theme-color" content="#f3f0e8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://marcandy.github.io/projects/crowdfunder/">
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Marc-Andy Noel Jeune">
+    <meta property="og:title" content="CrowdFunder case study | Marc-Andy Noel Jeune">
+    <meta property="og:description" content="A Kickstarter-style crowdfunding platform with real payment rails: React/Redux, PostgreSQL, Stripe, S3.">
+    <meta property="og:url" content="https://marcandy.github.io/projects/crowdfunder/">
+    <meta property="og:image" content="https://marcandy.github.io/assets/social-card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CrowdFunder case study | Marc-Andy Noel Jeune">
+    <meta name="twitter:image" content="https://marcandy.github.io/assets/social-card.png">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="MNJ, Marc-Andy Noel Jeune, home">
+        <span class="mnj-mark mnj-mark-header" aria-hidden="true">
+          <span>M</span><span>N</span><span>J</span>
+        </span>
+        <span class="wordmark-full">Marc-Andy Noel Jeune</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="/#work">Work</a>
+        <a href="/#experience">Experience</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <article class="case">
+        <p class="case-crumbs"><a href="/#work"><span aria-hidden="true">←</span> All work</a></p>
+        <div class="project-kicker">
+          <span>04</span>
+          <p>Case study · Full-stack build · 2017</p>
+        </div>
+        <h1>CrowdFunder</h1>
+        <p class="case-summary">
+          A Kickstarter-style crowdfunding platform with real payment rails: React and Redux,
+          PostgreSQL, Stripe, and Amazon S3. Built as my DevMountain capstone.
+        </p>
+        <ul class="tag-list" aria-label="CrowdFunder technologies">
+          <li>React</li><li>Redux</li><li>Node.js</li><li>PostgreSQL</li><li>Stripe</li><li>Amazon S3</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/Marcandy/crowdFunder">Repository <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <figure class="case-figure">
+          <div class="visual-window">
+            <div class="visual-toolbar"><span></span><span></span><span></span><b>CROWDFUNDER / 2017</b></div>
+            <img
+              class="visual-shot"
+              src="/assets/crowdfunder.webp"
+              alt="CrowdFunder campaign listing page with funding progress bars"
+              width="1200"
+              height="675"
+            >
+          </div>
+          <figcaption>The campaign listing as it ran in 2017. The Heroku demo retired with the free tier in 2022.</figcaption>
+        </figure>
+
+        <div class="case-body">
+          <h2>Problem</h2>
+          <p>
+            The DevMountain capstone brief was open-ended: build something real, end to end.
+            I chose a Kickstarter-style crowdfunding platform because it forces every layer at
+            once: auth, relational data with money attached, third-party payments, file uploads,
+            and a UI where funding progress has to update convincingly.
+          </p>
+
+          <h2>My role</h2>
+          <p>Full-stack: schema, API, payment integration, and the React front end.</p>
+
+          <h2>Approach</h2>
+          <p>
+            React with Redux on the front end; Node.js and PostgreSQL behind it; Stripe for
+            charges, Amazon S3 for campaign images, and Google sign-in for auth.
+          </p>
+
+          <h2>Key decisions</h2>
+          <ul>
+            <li>
+              <strong>Relational modeling first.</strong> Users, campaigns, and pledges are joins,
+              sums, and constraints. I picked Postgres over a document store because "how much has
+              this campaign raised" should be a query, not a reduce over JSON.
+            </li>
+            <li>
+              <strong>Redux for cross-cutting state.</strong> Campaign and pledge state is read by
+              listing pages, detail pages, and the pledge flow at the same time; centralizing it
+              kept those views consistent.
+            </li>
+            <li>
+              <strong>Real payment rails.</strong> Wiring actual Stripe charges in test mode,
+              instead of faking the money step, meant dealing with failure states and idempotency
+              as a student. That's the part most capstones skip.
+            </li>
+          </ul>
+
+          <h2>Result</h2>
+          <p>
+            My most-starred repository (7 stars, forked by other students). The live demo ran on
+            Heroku's free tier, which was retired in 2022; the screenshot above stands in for it,
+            and the code remains public.
+          </p>
+
+          <h2>What I'd do next</h2>
+          <p>
+            This is 2017 code, labeled as such. I keep it public because the distance between it
+            and <a href="/projects/vera/">Vera</a> shows the growth. A rebuild today would swap the
+            Redux boilerplate for server state with React Query, add migrations and tests, and
+            deploy the demo somewhere durable.
+          </p>
+        </div>
+
+        <nav class="case-nav" aria-label="More work">
+          <a href="/projects/spoticlone/"><span aria-hidden="true">←</span> Previous: SpotiClone</a>
+          <a href="/projects/spidercrawler/">Next: spiderCrawler <span aria-hidden="true">→</span></a>
+        </nav>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-identity">
+        <span class="mnj-mark mnj-mark-inverse" aria-hidden="true">
+          <span>M</span><span>N</span><span>J</span>
+        </span>
+        <p>© 2026 Marc-Andy Noel Jeune</p>
+      </div>
+      <p>Built with semantic HTML, custom CSS, and careful restraint.</p>
+    </footer>
+  </body>
+</html>
