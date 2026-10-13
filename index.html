@@ -67,7 +67,7 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=45dbd6ef">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -82,6 +82,7 @@
       <nav aria-label="Primary navigation">
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
+        <a href="#community">Community</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -92,16 +93,17 @@
         <div class="hero-copy">
           <p class="availability"><span aria-hidden="true"></span> Software consultant at Lotnivo · open to full-time roles</p>
           <p class="eyebrow">Marc-Andy Noel Jeune · Full-stack software engineer</p>
-          <h1 id="page-title">Full-stack engineer building production web and mobile products.</h1>
+          <h1 id="page-title">Production software, from UI to API.</h1>
           <p class="hero-summary">
             Ten years shipping production applications with React, TypeScript, Python, Java,
             Node.js, and PostgreSQL. Enterprise experience at Wells Fargo and JCPenney.
           </p>
           <div class="hero-actions" aria-label="Primary links">
-            <a class="button button-primary" href="assets/marc-andy-noel-jeune-resume.pdf" download>Download resume</a>
-            <a class="button button-secondary" href="mailto:marcandy.nj@gmail.com">Email me</a>
+            <a class="button button-primary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="assets/marc-andy-noel-jeune-resume.pdf" download>Download resume</a>
           </div>
           <div class="profile-links" aria-label="Professional profiles">
+            <a href="mailto:marcandy.nj@gmail.com">Email me <span aria-hidden="true">↗</span></a>
             <a href="https://github.com/Marcandy">GitHub <span aria-hidden="true">↗</span></a>
             <a href="https://www.linkedin.com/in/marcandy/">LinkedIn <span aria-hidden="true">↗</span></a>
           </div>
@@ -119,10 +121,10 @@
             <span>years building<br>production software</span>
           </div>
           <ul>
-            <li><span>01</span> Web and mobile delivery</li>
-            <li><span>02</span> Front end and backend systems</li>
-            <li><span>03</span> Accessibility and performance</li>
-            <li><span>04</span> Code review and mentorship</li>
+            <li><span>01</span> 5+ client engagements</li>
+            <li><span>02</span> Deploys from hours to minutes</li>
+            <li><span>03</span> Test coverage above 80%</li>
+            <li><span>04</span> Finance and retail experience</li>
           </ul>
         </aside>
       </section>
@@ -137,22 +139,30 @@
       <section class="work section-shell" id="work" aria-labelledby="work-title">
         <div class="section-heading">
           <p class="eyebrow">Selected work</p>
-          <h2 id="work-title">Five builds. Five different engineering problems.</h2>
+          <h2 id="work-title">A closer look at what I build.</h2>
           <p>
-            I chose work that shows product judgment, automation, mobile development, full-stack
-            delivery, and testing discipline. Each story is grounded in code or experience from
-            my resume.
+            Explore a live product, an automation pipeline, and earlier web and mobile builds.
+            For recent civic software and AI developer tools, see my
+            <a href="#community">open-source and hackathon contributions</a>.
           </p>
         </div>
 
+        <nav class="work-index" aria-label="Jump to a project">
+          <a href="#vera">01 Vera</a>
+          <a href="#openclaw">02 OpenClaw</a>
+          <a href="#spoticlone">03 SpotiClone</a>
+          <a href="#crowdfunder">04 CrowdFunder</a>
+          <a href="#spidercrawler">05 spiderCrawler</a>
+        </nav>
+
         <div class="project-list">
-          <article class="project-card">
+          <article class="project-card" id="vera" aria-labelledby="vera-title">
             <div class="project-copy">
               <div class="project-kicker">
                 <span>01</span>
                 <p>Product MVP · 2026</p>
               </div>
-              <h3>Vera</h3>
+              <h3 id="vera-title">Vera</h3>
               <p class="project-summary">
                 A home care operations workspace that connects scheduled visits,
                 caregiver records, evidence review, and billing readiness.
@@ -182,7 +192,7 @@
                 <li>Service layer</li>
               </ul>
               <div class="project-links">
-                <a href="/projects/vera/">Case study <span aria-hidden="true">→</span></a>
+                <a href="/projects/vera/" aria-label="Vera case study">Case study <span aria-hidden="true">→</span></a>
                 <a href="https://vera-homecare.vercel.app">Live demo <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/Marcandy/vera">Repository <span aria-hidden="true">↗</span></a>
               </div>
@@ -203,13 +213,13 @@
             </div>
           </article>
 
-          <article class="project-card project-card-reverse">
+          <article class="project-card project-card-reverse" id="openclaw" aria-labelledby="openclaw-title">
             <div class="project-copy">
               <div class="project-kicker">
                 <span>02</span>
                 <p>Automation system · Consulting</p>
               </div>
-              <h3>OpenClaw automation pipeline</h3>
+              <h3 id="openclaw-title">OpenClaw automation pipeline</h3>
               <p class="project-summary">
                 A self-hosted agent workflow that turns incoming items into ranked,
                 reviewable actions and documents.
@@ -239,7 +249,7 @@
                 <li>Human approval</li>
               </ul>
               <div class="project-links">
-                <a href="/projects/openclaw/">Case study <span aria-hidden="true">→</span></a>
+                <a href="/projects/openclaw/" aria-label="OpenClaw automation pipeline case study">Case study <span aria-hidden="true">→</span></a>
               </div>
               <p class="private-note">Consulting system. Code is private.</p>
             </div>
@@ -258,13 +268,13 @@
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" id="spoticlone" aria-labelledby="spoticlone-title">
             <div class="project-copy">
               <div class="project-kicker">
                 <span>03</span>
                 <p>Mobile prototype</p>
               </div>
-              <h3>SpotiClone</h3>
+              <h3 id="spoticlone-title">SpotiClone</h3>
               <p class="project-summary">
                 A React Native music application with album browsing, app navigation,
                 and media playback controls.
@@ -294,7 +304,7 @@
                 <li>React Navigation</li>
               </ul>
               <div class="project-links">
-                <a href="/projects/spoticlone/">Case study <span aria-hidden="true">→</span></a>
+                <a href="/projects/spoticlone/" aria-label="SpotiClone case study">Case study <span aria-hidden="true">→</span></a>
                 <a href="https://github.com/Marcandy/spoticlone">Repository <span aria-hidden="true">↗</span></a>
               </div>
             </div>
@@ -313,13 +323,13 @@
             </div>
           </article>
 
-          <article class="project-card project-card-reverse">
+          <article class="project-card project-card-reverse" id="crowdfunder" aria-labelledby="crowdfunder-title">
             <div class="project-copy">
               <div class="project-kicker">
                 <span>04</span>
                 <p>Full-stack web application</p>
               </div>
-              <h3>CrowdFunder</h3>
+              <h3 id="crowdfunder-title">CrowdFunder</h3>
               <p class="project-summary">
                 A crowdfunding application with campaign creation, authentication,
                 project discovery, and a Stripe contribution flow.
@@ -350,7 +360,7 @@
                 <li>Stripe</li>
               </ul>
               <div class="project-links">
-                <a href="/projects/crowdfunder/">Case study <span aria-hidden="true">→</span></a>
+                <a href="/projects/crowdfunder/" aria-label="CrowdFunder case study">Case study <span aria-hidden="true">→</span></a>
                 <a href="https://github.com/Marcandy/crowdFunder">Repository <span aria-hidden="true">↗</span></a>
               </div>
             </div>
@@ -363,19 +373,19 @@
                   <h4>Tools and space for neighborhood makers</h4>
                   <div class="fund-progress"><i></i></div>
                   <div class="fund-stats"><p><b>$18,420</b><span>pledged</span></p><p><b>74%</b><span>funded</span></p><p><b>12</b><span>days left</span></p></div>
-                  <button type="button" tabindex="-1">Back this project</button>
+                  <span class="fund-demo-action" aria-hidden="true">Back this project</span>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card" id="spidercrawler" aria-labelledby="spidercrawler-title">
             <div class="project-copy">
               <div class="project-kicker">
                 <span>05</span>
                 <p>Utility build · 2023</p>
               </div>
-              <h3>spiderCrawler</h3>
+              <h3 id="spidercrawler-title">spiderCrawler</h3>
               <p class="project-summary">
                 A small Node.js scraper carried like a real product: isolated extraction logic,
                 a Jest suite, and CI on every push.
@@ -406,7 +416,7 @@
                 <li>CircleCI</li>
               </ul>
               <div class="project-links">
-                <a href="/projects/spidercrawler/">Case study <span aria-hidden="true">→</span></a>
+                <a href="/projects/spidercrawler/" aria-label="spiderCrawler case study">Case study <span aria-hidden="true">→</span></a>
                 <a href="https://github.com/Marcandy/spiderCrawler">Repository <span aria-hidden="true">↗</span></a>
               </div>
             </div>
