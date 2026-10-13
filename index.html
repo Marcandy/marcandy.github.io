@@ -88,7 +88,7 @@
     <main id="main-content">
       <section class="hero" id="top" aria-labelledby="page-title">
         <div class="hero-copy">
-          <p class="availability"><span aria-hidden="true"></span> Open to software engineering roles</p>
+          <p class="availability"><span aria-hidden="true"></span> Software consultant at Lotnivo · open to full-time roles</p>
           <p class="eyebrow">Marc-Andy Noel Jeune · Full-stack software engineer</p>
           <h1 id="page-title">Full-stack engineer building production web and mobile products.</h1>
           <p class="hero-summary">
@@ -136,10 +136,11 @@
       <section class="work section-shell" id="work" aria-labelledby="work-title">
         <div class="section-heading">
           <p class="eyebrow">Selected work</p>
-          <h2 id="work-title">Four builds. Four different engineering problems.</h2>
+          <h2 id="work-title">Five builds. Five different engineering problems.</h2>
           <p>
-            I chose work that shows product judgment, automation, mobile development,
-            and full-stack delivery. Each story is grounded in code or experience from my resume.
+            I chose work that shows product judgment, automation, mobile development, full-stack
+            delivery, and testing discipline. Each story is grounded in code or experience from
+            my resume.
           </p>
         </div>
 
@@ -180,27 +181,23 @@
                 <li>Service layer</li>
               </ul>
               <div class="project-links">
+                <a href="/projects/vera/">Case study <span aria-hidden="true">→</span></a>
                 <a href="https://vera-homecare.vercel.app">Live demo <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/Marcandy/vera">Repository <span aria-hidden="true">↗</span></a>
               </div>
             </div>
 
-            <div class="project-visual vera-visual" role="img" aria-label="Vera visit pipeline interface preview">
+            <div class="project-visual vera-visual">
               <div class="visual-window">
-                <div class="visual-toolbar"><span></span><span></span><span></span><b>VERA / VISITS</b></div>
-                <div class="vera-body">
-                  <div class="vera-sidebar">
-                    <strong>Good morning.</strong>
-                    <span>Dashboard</span><span class="active">Visits</span><span>Billing</span><span>Caregivers</span>
-                  </div>
-                  <div class="vera-main">
-                    <div class="vera-title"><b>Today's visits</b><small>4 records</small></div>
-                    <div class="vera-row"><span class="status ready">Ready</span><b>Maria / Helen</b><small>8:00 AM</small></div>
-                    <div class="vera-row"><span class="status review">Review</span><b>James / Andre</b><small>9:30 AM</small></div>
-                    <div class="vera-row"><span class="status active-status">Active</span><b>Ruth / Taylor</b><small>11:00 AM</small></div>
-                    <div class="vera-panel"><small>VISIT EVIDENCE</small><b>3 of 4 items verified</b><i></i></div>
-                  </div>
-                </div>
+                <div class="visual-toolbar"><span></span><span></span><span></span><b>VERA / LIVE APP</b></div>
+                <img
+                  class="visual-shot"
+                  src="/assets/vera-dashboard.webp"
+                  alt="Vera admin dashboard listing the day's home-care visits with needs-review, ready-to-bill, and in-progress statuses"
+                  width="1200"
+                  height="750"
+                  loading="lazy"
+                >
               </div>
             </div>
           </article>
@@ -240,6 +237,9 @@
                 <li>LLM routing</li>
                 <li>Human approval</li>
               </ul>
+              <div class="project-links">
+                <a href="/projects/openclaw/">Case study <span aria-hidden="true">→</span></a>
+              </div>
               <p class="private-note">Consulting system. Code is private.</p>
             </div>
 
@@ -293,6 +293,7 @@
                 <li>React Navigation</li>
               </ul>
               <div class="project-links">
+                <a href="/projects/spoticlone/">Case study <span aria-hidden="true">→</span></a>
                 <a href="https://github.com/Marcandy/spoticlone">Repository <span aria-hidden="true">↗</span></a>
               </div>
             </div>
@@ -348,11 +349,12 @@
                 <li>Stripe</li>
               </ul>
               <div class="project-links">
+                <a href="/projects/crowdfunder/">Case study <span aria-hidden="true">→</span></a>
                 <a href="https://github.com/Marcandy/crowdFunder">Repository <span aria-hidden="true">↗</span></a>
               </div>
             </div>
 
-            <div class="project-visual fund-visual" role="img" aria-label="CrowdFunder campaign interface preview">
+            <div class="project-visual fund-visual" role="img" aria-label="CrowdFunder campaign interface illustration">
               <div class="fund-card">
                 <div class="fund-image"><span>COMMUNITY<br>WORKSHOP</span></div>
                 <div class="fund-content">
@@ -362,6 +364,60 @@
                   <div class="fund-stats"><p><b>$18,420</b><span>pledged</span></p><p><b>74%</b><span>funded</span></p><p><b>12</b><span>days left</span></p></div>
                   <button type="button" tabindex="-1">Back this project</button>
                 </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-copy">
+              <div class="project-kicker">
+                <span>05</span>
+                <p>Utility build · 2023</p>
+              </div>
+              <h3>spiderCrawler</h3>
+              <p class="project-summary">
+                A small Node.js scraper carried like a real product: isolated extraction logic,
+                a Jest suite, and CI on every push.
+              </p>
+              <dl class="project-details">
+                <div>
+                  <dt>Problem</dt>
+                  <dd>Pages without an API needed structured data, on a job small enough to do carelessly.</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>An Express service wraps an axios and cheerio scraper, with extraction logic isolated from routes.</dd>
+                </div>
+                <div>
+                  <dt>Decision</dt>
+                  <dd>Test and automate anyway: Jest with supertest, and machine-readable reports for CircleCI.</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>A small tool with big-project hygiene that fails loudly before its consumers notice.</dd>
+                </div>
+              </dl>
+              <ul class="tag-list" aria-label="spiderCrawler technologies">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Cheerio</li>
+                <li>Jest</li>
+                <li>CircleCI</li>
+              </ul>
+              <div class="project-links">
+                <a href="/projects/spidercrawler/">Case study <span aria-hidden="true">→</span></a>
+                <a href="https://github.com/Marcandy/spiderCrawler">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+
+            <div class="project-visual term-visual" role="img" aria-label="spiderCrawler test run illustration">
+              <div class="term-screen">
+                <p class="term-line term-cmd">$ npm test</p>
+                <p class="term-line"><code>jest --detectOpenHandles</code></p>
+                <p class="term-line term-pass"><b>PASS</b> __tests__/scraper.test.js</p>
+                <p class="term-line">Test Suites: 1 passed, 1 total</p>
+                <p class="term-line">Report written: junit.xml</p>
+                <p class="term-line term-ci">CircleCI · runs on every push</p>
               </div>
             </div>
           </article>

@@ -35,8 +35,10 @@ jobs:
         run: |
           git -C publish rm -r .
           mkdir -p publish/assets
-          cp source/index.html source/styles.css source/.nojekyll publish/
+          cp source/index.html source/404.html source/styles.css source/robots.txt source/sitemap.xml source/.nojekyll publish/
           cp -r source/assets/. publish/assets/
+          cp -r source/projects publish/projects
+          cp -r source/img publish/img
 
       - name: Publish to the existing Pages source
         working-directory: publish
