@@ -18,5 +18,6 @@ Open `http://localhost:4173`.
 - When the resume changes, replace both copies: `assets/marc-andy-noel-jeune-resume.pdf` and `img/resume.pdf`.
 - Keep the homepage experience, skills, community contributions, and project results in sync with the resume.
 - `npm run check` validates every page (links, ids, meta, copy rules) and runs in CI before each deploy.
+- `npm run build:sites` packages all pages and assets under `dist/` for the optional Sites deployment.
 - When changing CSS, update the `styles.css?v=...` version in every page so returning visitors receive the new styles.
 - Pushing to `master` publishes automatically.
