@@ -20,6 +20,10 @@ html {
   scroll-behavior: smooth;
 }
 
+[id] {
+  scroll-margin-top: 7rem;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -50,14 +54,16 @@ a {
 }
 
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: min(calc(100% - 3rem), var(--max-width));
+  width: 100%;
   margin: 0 auto;
-  padding: 1.25rem 0;
+  padding: 0.85rem max(1.5rem, calc((100vw - var(--max-width)) / 2));
+  background: var(--paper);
   border-bottom: 1px solid var(--line);
 }
 
@@ -107,12 +113,15 @@ a {
   background: transparent;
 }
 
-nav {
+.site-header nav {
   display: flex;
   gap: clamp(1rem, 3vw, 2.25rem);
 }
 
-nav a {
+.site-header nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
   font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
@@ -151,13 +160,13 @@ nav a:hover::after,
   align-items: center;
   width: min(calc(100% - 3rem), var(--max-width));
   margin: 0 auto;
-  padding: clamp(3.5rem, 7vh, 5.5rem) 0 clamp(3.5rem, 8vh, 6rem);
+  padding: clamp(2.5rem, 5vh, 4rem) 0 clamp(3.5rem, 8vh, 6rem);
 }
 
 .hero::before {
   position: absolute;
   top: 2rem;
-  right: -10vw;
+  right: 0;
   width: min(45vw, 36rem);
   height: min(45vw, 36rem);
   border: 1px solid rgb(21 23 25 / 9%);
@@ -179,12 +188,13 @@ nav a:hover::after,
   display: inline-flex;
   gap: 0.55rem;
   align-items: center;
-  margin: 0 0 3rem;
+  margin: 0 0 1.75rem;
   font-size: 0.82rem;
   font-weight: 700;
 }
 
 .availability span {
+  flex: 0 0 auto;
   width: 0.65rem;
   height: 0.65rem;
   background: #1a7f50;
@@ -193,12 +203,12 @@ nav a:hover::after,
 }
 
 h1 {
-  max-width: 11ch;
+  max-width: 16ch;
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.35rem, 7vw, 6.65rem);
+  font-size: clamp(3.25rem, 5.8vw, 5.75rem);
   font-weight: 400;
-  line-height: 0.92;
+  line-height: 1;
   letter-spacing: -0.055em;
 }
 
@@ -221,6 +231,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.65rem;
   min-height: 3.25rem;
   padding: 0.75rem 1.25rem;
   border: 1px solid var(--ink);
@@ -251,6 +262,7 @@ h1 {
 
 .profile-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -400,6 +412,31 @@ h2 {
   gap: clamp(7rem, 14vw, 12rem);
 }
 
+.work-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: -2rem 0 3rem;
+}
+
+.work-index a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.work-index a:hover,
+.work-index a:focus-visible {
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
+}
+
 .project-card {
   display: grid;
   grid-template-columns: minmax(19rem, 0.85fr) minmax(24rem, 1.15fr);
@@ -518,6 +555,7 @@ h3 {
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.4rem;
   margin-top: 1.5rem;
 }
@@ -735,7 +773,7 @@ h3 {
 .fund-stats p { display: grid; gap: 0.1rem; margin: 0; }
 .fund-stats b { font-size: 0.7rem; }
 .fund-stats span { color: #77756f; font-size: 0.5rem; }
-.fund-content button { width: 100%; margin-top: 1rem; padding: 0.7rem; color: white; background: #1e4c49; border: 0; font-size: 0.62rem; font-weight: 800; }
+.fund-demo-action { display: block; width: 100%; margin-top: 1rem; padding: 0.7rem; color: white; background: #1e4c49; font-size: 0.62rem; font-weight: 800; text-align: center; }
 
 .term-visual {
   display: grid;
@@ -1154,6 +1192,40 @@ footer p {
   font-weight: 800;
 }
 
+.case-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.case-contact p {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.case-contact a,
+.case-nav a,
+.project-links a,
+.profile-links a,
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.case-contact a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-underline-offset: 0.3rem;
+}
+
 .hero-copy,
 .hero-evidence {
   animation: reveal 650ms ease both;
@@ -1181,6 +1253,14 @@ footer p {
 }
 
 @media (max-width: 940px) {
+  .wordmark-full {
+    display: none;
+  }
+
+  .site-header nav {
+    gap: 1rem;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -1242,20 +1322,38 @@ footer p {
 
 @media (max-width: 680px) {
   .site-header {
-    width: min(calc(100% - 2rem), var(--max-width));
+    position: relative;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem;
   }
 
-  .wordmark-full,
-  nav a:nth-child(2),
-  nav a:nth-child(3),
-  nav a:nth-child(4) {
-    display: none;
+  .wordmark-full {
+    display: inline;
+  }
+
+  .site-header nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  .site-header nav a {
+    justify-content: center;
+    padding: 0.25rem;
+    border: 1px solid var(--line);
+    font-size: 0.8rem;
+  }
+
+  [id] {
+    scroll-margin-top: 1rem;
   }
 
   .hero {
     width: min(calc(100% - 2rem), var(--max-width));
     gap: 3rem;
-    padding: 3.25rem 0 3.5rem;
+    padding: 2rem 0 3.5rem;
   }
 
   .section-shell {
@@ -1333,7 +1431,7 @@ footer p {
   }
 
   h1 {
-    font-size: clamp(3.25rem, 16vw, 5rem);
+    font-size: clamp(3rem, 12vw, 4.5rem);
   }
 
   .hero-summary {

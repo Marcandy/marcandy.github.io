@@ -58,6 +58,17 @@ for (const page of pages) {
     for (const match of html.matchAll(pattern)) {
       const target = localPathFromUrl(match[1], pageDir);
       if (target) assert(existsSync(target), label(`broken local ${attribute}: ${match[1]}`));
+      if (attribute !== "href" || /^(?:https?:|mailto:|tel:)/.test(match[1])) continue;
+      const hash = match[1].indexOf("#");
+      if (hash === -1) continue;
+      const fragment = match[1].slice(hash + 1);
+      if (!fragment) continue;
+      let targetPage = target || pagePath;
+      if (!existsSync(targetPage)) continue;
+      if (statSync(targetPage).isDirectory()) targetPage = resolve(targetPage, "index.html");
+      if (!existsSync(targetPage) || extname(targetPage) !== ".html") continue;
+      const targetIds = [...readFileSync(targetPage, "utf8").matchAll(/\sid="([^"]+)"/g)].map((entry) => entry[1]);
+      assert(targetIds.includes(decodeURIComponent(fragment)), label(`broken local anchor: ${match[1]}`));
     }
   }
 
@@ -96,7 +107,7 @@ for (const page of pages) {
 
 const indexHtml = readFileSync(resolve(root, "index.html"), "utf8");
 const indexIds = [...indexHtml.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
-for (const id of ["main-content", "work", "experience", "skills", "contact"]) {
+for (const id of ["main-content", "work", "experience", "community", "skills", "contact"]) {
   assert(indexIds.includes(id), `index.html: missing required section id: ${id}`);
 }
 
@@ -105,6 +116,7 @@ assert(resume.subarray(0, 4).toString() === "%PDF", "Resume asset is not a valid
 
 const oldPathResume = readFileSync(resolve(root, "img/resume.pdf"));
 assert(oldPathResume.subarray(0, 4).toString() === "%PDF", "img/resume.pdf is not a valid PDF file.");
+assert(resume.equals(oldPathResume), "Resume copies differ; both download paths must serve the current resume.");
 
 const socialCard = readFileSync(resolve(root, "assets/social-card.png"));
 assert(socialCard.subarray(1, 4).toString() === "PNG", "Social card is not a valid PNG file.");
