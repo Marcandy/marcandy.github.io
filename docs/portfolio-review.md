@@ -4,6 +4,8 @@ Reviewed November 2, 2026. Scope: the existing GitHub Pages portfolio, the suppl
 
 ## Current presentation decision
 
+The [whole-site hiring content review](hiring-content-review.md) extends this decision to the homepage, project pages, metadata, and contact flow.
+
 The portfolio serves employers evaluating Marc for interviews. At the user's direction, homepage project cards show a project name, one concise description, technologies, and a direct demo or GitHub link. Remove lifecycle badges, evaluation labels, caveats, engineering breakdowns, and secondary evidence links. Use accurate positive descriptions without claiming unimplemented features. The six-project order and responsive grid stay in place. This decision supersedes the earlier recommendations about displaying project status or scope on homepage cards; the research below remains the technical review record.
 
 ## Findings

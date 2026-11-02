@@ -18,8 +18,8 @@ Open `http://localhost:4173`.
 - When the resume changes, replace both copies: `assets/marc-andy-noel-jeune-resume.pdf` and `img/resume.pdf`.
 - Keep the homepage experience, skills, community contributions, and project results in sync with the resume.
 - `npm run check` validates every page (links, ids, meta, copy rules), the six-project order, evidence links, and matching resume copies. It runs on pull requests and before each deploy.
-- Selected work uses two cards per row above 48rem and one below it. Keep the project jump links and card order aligned.
-- See [the portfolio review](docs/portfolio-review.md) for selection evidence, adversarial assessment, and follow-up priorities.
+- Selected work uses two cards per row above 48rem and one below it. Preserve the selected project order and direct demo/code links.
+- See [the hiring content review](docs/hiring-content-review.md) for the current editorial standard and [the original review](docs/portfolio-review.md) for project research.
 - `npm run build:sites` packages all pages and assets under `dist/` for the optional Sites deployment.
 - When changing CSS, update the `styles.css?v=...` version in every page so returning visitors receive the new styles.
 - Pushing to `master` publishes automatically.
