@@ -1,0 +1,16 @@
+name: Check portfolio pull request
+
+on:
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate pages, selected projects, and resume downloads
+        run: node scripts/validate.mjs
