@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>spiderCrawler case study | Marc-Andy Noel Jeune</title>
+    <title>spiderCrawler | Marc-Andy Noel Jeune</title>
     <meta
       name="description"
-      content="A source-grounded Python rulemaking monitor with verified quotations, human review, and explicit evaluation limits."
+      content="A Python pipeline that turns Pennsylvania rulemaking updates into source-linked summaries with quote verification and human review."
     >
     <meta name="author" content="Marc-Andy Noel Jeune">
     <meta name="theme-color" content="#f3f0e8">
@@ -15,15 +15,14 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Marc-Andy Noel Jeune">
-    <meta property="og:title" content="spiderCrawler case study | Marc-Andy Noel Jeune">
-    <meta property="og:description" content="A Python pipeline that monitors Pennsylvania criminal rulemaking, verifies
-          extracted claims against source text, and routes every item to human review.">
+    <meta property="og:title" content="spiderCrawler | Marc-Andy Noel Jeune">
+    <meta property="og:description" content="A Python pipeline that turns Pennsylvania rulemaking updates into source-linked summaries with quote verification and human review.">
     <meta property="og:url" content="https://marcandy.github.io/projects/spidercrawler/">
     <meta property="og:image" content="https://marcandy.github.io/assets/social-card.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="spiderCrawler case study | Marc-Andy Noel Jeune">
+    <meta name="twitter:title" content="spiderCrawler | Marc-Andy Noel Jeune">
     <meta name="twitter:image" content="https://marcandy.github.io/assets/social-card.png">
-    <link rel="stylesheet" href="/styles.css?v=1299a041">
+    <link rel="stylesheet" href="/styles.css?v=e0753fae">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -36,7 +35,7 @@
         <span class="wordmark-full">Marc-Andy Noel Jeune</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="/#work">Work</a>
+        <a href="/#work">Projects</a>
         <a href="/#experience">Experience</a>
         <a href="/#community">Community</a>
         <a href="/#skills">Skills</a>
@@ -46,51 +45,33 @@
 
     <main id="main-content">
       <article class="case">
-        <p class="case-crumbs"><a href="/#work"><span aria-hidden="true">←</span> All work</a></p>
-        <div class="project-kicker">
-          <span>05</span>
-          <p>Case study · Utility build · 2023</p>
-        </div>
+        <p class="case-crumbs"><a href="/#work"><span aria-hidden="true">←</span> All projects</a></p>
+        <div class="project-kicker"><p>AI document monitoring</p></div>
         <h1>spiderCrawler</h1>
-        <p class="case-summary">
-          A Python pipeline that monitors Pennsylvania criminal rulemaking, verifies
-          extracted claims against source text, and routes every item to human review.
-        </p>
-        <ul class="tag-list" aria-label="spiderCrawler technologies">
-          <li>Python</li><li>PDF extraction</li><li>LLM APIs</li><li>Human review</li><li>GitHub Actions</li>
-        </ul>
+        <p class="case-summary">A Python pipeline that turns Pennsylvania rulemaking updates into source-linked summaries with quote verification and human review.</p>
+        <ul class="tag-list" aria-label="Technologies"><li>Python</li><li>PDF extraction</li><li>LLM APIs</li><li>GitHub Actions</li></ul>
         <div class="project-links">
-          <a href="https://github.com/Marcandy/spiderCrawler">Repository <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Marcandy/spiderCrawler">GitHub code <span aria-hidden="true">&nearr;</span></a>
         </div>
 
         <div class="case-body">
-          <h2>Problem</h2>
-          <p>Rulemaking updates arrive as committee-page entries and PDFs. A useful change monitor must preserve the source of each claim and prevent unsupported summaries from reaching a published digest.</p>
-          <h2>Approach</h2>
-          <p>The Python pipeline fetches committee pages, checks their structure, detects new items, extracts PDF text, and requests structured summaries. A deterministic verifier checks source quotations, dates, and rule identifiers before routing records to a local review app.</p>
-          <h2>Key decisions</h2>
+          <h2>Highlights</h2>
           <ul>
-            <li><strong>Keep the model inside a checked pipeline.</strong> Fetching, detection, source checks, routing, and publication remain deterministic steps around extraction.</li>
-            <li><strong>Fail closed on unsupported claims.</strong> Blocked records cannot be approved; edited summaries pass through verification again.</li>
-            <li><strong>Require human approval.</strong> The digest includes only approved items with source and review provenance.</li>
-            <li><strong>Detect source changes.</strong> Unexpected page structure or record counts stop processing rather than silently producing misleading updates.</li>
+            <li>Monitors committee pages, detects new records, and extracts PDF text for structured summaries.</li>
+            <li>Checks quotations, dates, and rule identifiers against the source before review.</li>
+            <li>Connects a review app, approval workflow, and source-linked digest.</li>
           </ul>
-          <h2>Result and limits</h2>
-          <p>The repository documents an implemented pipeline, verifier, review app, digest, evaluation harness, and offline test suite. As of November 1, 2026, evaluation results and external reviewer validation are still pending. These are implementation claims, not measured extraction accuracy.</p>
-          <p>This is a rulemaking-monitoring project, not legal advice. Read the <a href="https://github.com/Marcandy/spiderCrawler/blob/main/docs/LIMITATIONS.md">limitations</a> and <a href="https://github.com/Marcandy/spiderCrawler/blob/main/docs/EVAL.md">evaluation plan</a> with the source.</p>
-          <h2>Next validation</h2>
-          <p>Run the evaluation harness on the documented fixtures, publish measured failure cases, and obtain external review before making reliability claims.</p>
         </div>
 
         <aside class="case-contact" aria-label="Contact Marc-Andy">
-          <p>Have a similar problem to solve?</p>
+          <p>Discuss an engineering role.</p>
           <a href="mailto:marcandy.nj@gmail.com">Email Marc-Andy <span aria-hidden="true">&nearr;</span></a>
           <a href="/assets/marc-andy-noel-jeune-resume.pdf" download>Download resume</a>
         </aside>
 
-        <nav class="case-nav" aria-label="More work">
-          <a href="/projects/crowdfunder/"><span aria-hidden="true">←</span> Previous: CrowdFunder</a>
-          <a href="/#work">All work <span aria-hidden="true">→</span></a>
+        <nav class="case-nav" aria-label="More projects">
+          <a href="/#work">All projects <span aria-hidden="true">&rarr;</span></a>
+          <a href="/#contact">Contact <span aria-hidden="true">&nearr;</span></a>
         </nav>
       </article>
     </main>
@@ -102,7 +83,7 @@
         </span>
         <p>© 2026 Marc-Andy Noel Jeune</p>
       </div>
-      <p>Built with semantic HTML, custom CSS, and careful restraint.</p>
+      <a href="mailto:marcandy.nj@gmail.com">marcandy.nj@gmail.com</a>
     </footer>
   </body>
 </html>
