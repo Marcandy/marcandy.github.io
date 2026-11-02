@@ -409,7 +409,9 @@ h2 {
 
 .project-list {
   display: grid;
-  gap: clamp(7rem, 14vw, 12rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
 .work-index {
@@ -438,19 +440,72 @@ h2 {
 }
 
 .project-card {
-  display: grid;
-  grid-template-columns: minmax(19rem, 0.85fr) minmax(24rem, 1.15fr);
-  gap: clamp(3rem, 7vw, 7rem);
+  display: flex;
+  min-width: 0;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  scroll-margin-top: 7rem;
+}
+
+.project-card .project-copy {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.project-card h3 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  overflow-wrap: anywhere;
+}
+
+.project-card .project-summary {
+  margin: 1rem 0 1.25rem;
+}
+
+.project-card .project-details div {
+  grid-template-columns: 1fr;
+  gap: 0.4rem;
+}
+
+.project-status {
+  align-self: flex-start;
+  margin: 0 0 1rem;
+  padding: 0.3rem 0.6rem;
+  color: var(--accent-dark);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.project-note {
+  margin: 1rem 0 0;
+  color: #4f504b;
+  font-size: 0.85rem;
+}
+
+.project-card .tag-list {
+  margin-bottom: 1.25rem;
+}
+
+.project-card .project-links {
+  gap: 0.25rem 1.25rem;
+  margin-top: auto;
+}
+
+.project-card .project-links a {
+  display: inline-flex;
   align-items: center;
+  gap: 0.35rem;
+  min-height: 2.75rem;
 }
 
-.project-card-reverse .project-copy {
-  grid-column: 2;
-}
-
-.project-card-reverse .project-visual {
-  grid-row: 1;
-  grid-column: 1;
+@media (max-width: 48rem) {
+  .project-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .project-kicker {
@@ -1275,7 +1330,6 @@ footer p {
   }
 
   .section-heading,
-  .project-card,
   .skills-shell,
   .about {
     grid-template-columns: 1fr;
@@ -1283,20 +1337,6 @@ footer p {
 
   .section-heading > p:last-child {
     max-width: 40rem;
-  }
-
-  .project-card-reverse .project-copy,
-  .project-card-reverse .project-visual {
-    grid-row: auto;
-    grid-column: auto;
-  }
-
-  .project-card-reverse .project-copy {
-    order: 1;
-  }
-
-  .project-card-reverse .project-visual {
-    order: 2;
   }
 
   .project-copy {
