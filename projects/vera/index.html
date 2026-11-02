@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vera case study | Marc-Andy Noel Jeune">
     <meta name="twitter:image" content="https://marcandy.github.io/assets/social-card.png">
-    <link rel="stylesheet" href="/styles.css?v=45dbd6ef">
+    <link rel="stylesheet" href="/styles.css?v=1299a041">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -52,15 +52,15 @@
         </div>
         <h1>Vera</h1>
         <p class="case-summary">
-          One clean flow from scheduled home-care visit to billable record, modeled on
-          federally required Electronic Visit Verification.
+          A full-stack home care beta that connects visits, caregiver documents,
+          evidence review, and billing readiness with server-enforced access rules.
         </p>
         <ul class="tag-list" aria-label="Vera technologies">
-          <li>React</li><li>Vite</li><li>React Router</li><li>CSS Modules</li><li>Vercel</li>
+          <li>React</li><li>Vite</li><li>React Router</li><li>CSS Modules</li><li>Java</li><li>Spring Boot</li><li>MySQL</li>
         </ul>
         <div class="project-links">
-          <a href="https://vera-homecare.vercel.app">Live demo <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/Marcandy/vera">Repository <span aria-hidden="true">↗</span></a>
+          <a href="https://veraforcare.com">Live demo <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Marcandy/vera">Earlier frontend source <span aria-hidden="true">&nearr;</span></a>
         </div>
 
         <figure class="case-figure">
@@ -74,89 +74,28 @@
               height="750"
             >
           </div>
-          <figcaption>The live admin dashboard: every visit carries its pipeline status, needs-review first.</figcaption>
+          <figcaption>Earlier frontend dashboard: the visit-status interface that preceded the full-stack beta.</figcaption>
         </figure>
 
         <div class="case-body">
           <h2>Problem</h2>
-          <p>
-            Small home-care agencies mostly run on software that is broad, expensive, and
-            disconnected. Interviews with agency owners in Philadelphia surfaced three concrete
-            pain points: managing caregiver onboarding documents, knowing when caregivers are
-            actually with patients, and collecting patient signatures. On top of that,
-            Medicaid-funded home care is federally required to use Electronic Visit Verification
-            (EVV) under the 21st Century Cures Act, so the evidence trail isn't optional.
-            It's the product.
-          </p>
-          <p>
-            Vera is a workspace built around one flow: a scheduled visit becomes a verified,
-            evidence-backed record, and the moment it's verified, the claim is ready to submit.
-          </p>
-
+          <p>Interviews with home care agency owners in Philadelphia highlighted disconnected caregiver paperwork, visit tracking, and patient signatures. Vera connects these tasks in one workspace, from a scheduled visit to evidence review and billing readiness.</p>
           <h2>My role</h2>
-          <p>Sole designer and developer: the owner interviews, the UX, the front-end architecture, and delivery.</p>
-
+          <p>Designer and developer, from agency-owner interviews and interface design to the React client and Java Spring Boot API.</p>
           <h2>Approach</h2>
-          <p>
-            Two surfaces for two very different users. Administrators get a dashboard with
-            needs-review visits first, visit detail with the full evidence trail, billing with
-            one-click mock claim submission, and a caregiver roster with per-caregiver onboarding
-            checklists. Caregivers get a phone-width surface with one primary action per screen:
-            check in, then check out with an assessment and the patient's signature.
-          </p>
-          <p>
-            Underneath is a visit pipeline (<code>scheduled → in progress → ready to bill →
-            billed</code>, with a <code>needs review</code> detour). Every transition has a cause,
-            and the rules live in a service layer of domain verbs (<code>checkInVisit</code>,
-            <code>checkOutVisit</code>, <code>supplyEvidence</code>, <code>submitClaim</code>),
-            never in components.
-          </p>
-
+          <p>Administrators manage patients, caregivers, document review, visits, and billing. Caregivers use a phone-width interface for their assigned visits, check-in, checkout, and document submissions. React services call the API; Java services enforce the rules over MySQL records.</p>
           <h2>Key decisions</h2>
           <ul>
-            <li>
-              <strong>The service layer is the backend seam.</strong> Components never import data
-              directly; they call async services with realistic latency. A real API can replace the
-              mock internals without changing a single component. The seam was designed before the
-              backend exists.
-            </li>
-            <li>
-              <strong>No admin override for flagged visits.</strong> A visit is billable only when
-              all four pieces of evidence exist: check-in time, check-out time, assessment,
-              signature. The only way to clear a flag is to supply the missing evidence, because
-              clicking a button does not create a signature. In a compliance domain, the tempting
-              "let the admin fix it" button is the wrong product.
-            </li>
-            <li>
-              <strong>System-stamped timestamps, never typed.</strong> A typed timestamp would be
-              fabricated evidence; the system records the moment the event happens.
-            </li>
-            <li>
-              <strong>Derived state over stored flags.</strong> The missing-evidence panel and each
-              caregiver's cleared-to-work badge are computed from the record at render time, so the
-              UI can never disagree with the data.
-            </li>
-            <li>
-              <strong>No UI libraries.</strong> React Router and CSS Modules only. The bundle stays
-              lean and every pixel is explainable in review.
-            </li>
+            <li><strong>Enforce access on the server.</strong> Sessions, roles, and ownership checks constrain access to caregiver records and visit actions.</li>
+            <li><strong>Keep domain transitions in services.</strong> Check-in, checkout, missing evidence, and simulated claim submission have explicit service operations.</li>
+            <li><strong>Require evidence to resolve flags.</strong> Missing assessment or signature evidence must be supplied before a visit becomes billable.</li>
+            <li><strong>Preserve document history.</strong> Pending renewals do not replace accepted credentials until review; private downloads and document policies remain server-controlled.</li>
           </ul>
-
-          <h2>Result</h2>
-          <p>
-            Live on Vercel, developed through 24 merged pull requests with a scripted 13-scenario
-            manual QA pass before each merge. The README states the scope honestly: a portfolio MVP
-            inspired by EVV. It is not certified EVV software, makes no HIPAA claims, and keeps
-            data in memory by design.
-          </p>
-
-          <h2>What I'd do next</h2>
-          <p>
-            Persistence (localStorage first, then a real API behind the same service contracts),
-            automated tests (Vitest and React Testing Library for the service layer, Playwright for
-            the visit flow end to end), real browser geolocation at check-in, and real claim
-            formats (837/835) against a clearinghouse sandbox.
-          </p>
+          <h2>Result and scope</h2>
+          <p>The live beta at <a href="https://veraforcare.com">veraforcare.com</a> connects the React interface to the Spring Boot API and persistent MySQL data. The full-stack repository is private. The <a href="https://github.com/Marcandy/vera">earlier frontend repository</a> is available separately and does not represent the current backend.</p>
+          <p>Vera is an EVV-inspired beta using fictional demo data and simulated claim submission. It is not certified EVV software and makes no HIPAA claims. The screenshot above records the earlier frontend interface.</p>
+          <h2>Next validation</h2>
+          <p>Continue checking role boundaries, visit transitions, and document renewal behavior as the beta grows. Separate demonstrated product behavior from certification or operational outcomes that have not been established.</p>
         </div>
 
         <aside class="case-contact" aria-label="Contact Marc-Andy">
