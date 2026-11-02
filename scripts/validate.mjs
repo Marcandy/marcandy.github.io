@@ -111,6 +111,17 @@ for (const id of ["main-content", "work", "experience", "community", "skills", "
   assert(indexIds.includes(id), `index.html: missing required section id: ${id}`);
 }
 
+// Keep the selected-work contract checked alongside local links and resume parity.
+const workSection = indexHtml.match(/<section class="work[\s\S]*?<\/section>/)?.[0] || "";
+const cards = [...workSection.matchAll(/<article class="project-card" id="([^"]+)"[\s\S]*?<\/article>/g)];
+const selectedIds = ["vera", "helpdesk-automata", "spidercrawler", "crowdfunder", "trellin", "think-wide"];
+assert(cards.length === 6, "Selected work must contain exactly six project cards.");
+assert(cards.map((card) => card[1]).join(",") === selectedIds.join(","), "Selected work order changed.");
+for (const card of cards) {
+  assert(/href="https:\/\/(?:github\.com\/|veraforcare\.com)/.test(card[0]), `${card[1]}: missing live beta or GitHub link.`);
+  assert(workSection.includes(`href="#${card[1]}"`), `${card[1]}: missing project jump link.`);
+}
+
 const resume = readFileSync(resolve(root, "assets/marc-andy-noel-jeune-resume.pdf"));
 assert(resume.subarray(0, 4).toString() === "%PDF", "Resume asset is not a valid PDF file.");
 
