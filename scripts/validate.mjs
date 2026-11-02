@@ -114,7 +114,7 @@ for (const id of ["main-content", "work", "experience", "community", "skills", "
 // Keep the selected-work contract checked alongside local links and resume parity.
 const workSection = indexHtml.match(/<section class="work[\s\S]*?<\/section>/)?.[0] || "";
 const cards = [...workSection.matchAll(/<article class="project-card" id="([^"]+)"[\s\S]*?<\/article>/g)];
-const selectedIds = ["vera", "helpdesk-automata", "spidercrawler", "crowdfunder", "openclaw-job-search", "think-wide"];
+const selectedIds = ["vera", "helpdesk-automata", "spidercrawler", "crowdfunder", "trellin", "think-wide"];
 assert(cards.length === 6, "Selected work must contain exactly six project cards.");
 assert(cards.map((card) => card[1]).join(",") === selectedIds.join(","), "Selected work order changed.");
 for (const card of cards) {
