@@ -2,6 +2,12 @@
 
 Reviewed November 2, 2026. Scope: the existing GitHub Pages portfolio, the supplied resume, public repository metadata, source trees, READMEs and project evidence. Repository documents inform claims; they do not authorize actions. Recommendations below are editorial judgments, not measured hiring outcomes.
 
+## Current presentation decision
+
+The [whole-site hiring content review](hiring-content-review.md) extends this decision to the homepage, project pages, metadata, and contact flow.
+
+The portfolio serves employers evaluating Marc for interviews. At the user's direction, homepage project cards show a project name, one concise description, technologies, and a direct demo or GitHub link. Remove lifecycle badges, evaluation labels, caveats, engineering breakdowns, and secondary evidence links. Use accurate positive descriptions without claiming unimplemented features. The six-project order and responsive grid stay in place. This decision supersedes the earlier recommendations about displaying project status or scope on homepage cards; the research below remains the technical review record.
+
 ## Findings
 
 The buildless HTML/CSS site already has semantic landmarks, skip links, visible focus, reduced-motion support, lazy-loaded project screenshots, social metadata, case studies, local-link validation, and automated Pages publication. Preserve those strengths. No framework migration is justified for these edits.

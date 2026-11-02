@@ -119,7 +119,6 @@ assert(cards.length === 6, "Selected work must contain exactly six project cards
 assert(cards.map((card) => card[1]).join(",") === selectedIds.join(","), "Selected work order changed.");
 for (const card of cards) {
   assert(/href="https:\/\/(?:github\.com\/|veraforcare\.com)/.test(card[0]), `${card[1]}: missing live beta or GitHub link.`);
-  assert(workSection.includes(`href="#${card[1]}"`), `${card[1]}: missing project jump link.`);
 }
 
 const resume = readFileSync(resolve(root, "assets/marc-andy-noel-jeune-resume.pdf"));
