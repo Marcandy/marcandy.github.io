@@ -6,7 +6,7 @@
     <title>spiderCrawler case study | Marc-Andy Noel Jeune</title>
     <meta
       name="description"
-      content="A small Node.js scraper with big-project hygiene: an isolated extraction layer, a Jest suite with supertest, and CircleCI on every push."
+      content="A source-grounded Python rulemaking monitor with verified quotations, human review, and explicit evaluation limits."
     >
     <meta name="author" content="Marc-Andy Noel Jeune">
     <meta name="theme-color" content="#f3f0e8">
@@ -16,7 +16,8 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Marc-Andy Noel Jeune">
     <meta property="og:title" content="spiderCrawler case study | Marc-Andy Noel Jeune">
-    <meta property="og:description" content="A small Node.js scraper with big-project hygiene: Jest suite, supertest, CircleCI.">
+    <meta property="og:description" content="A Python pipeline that monitors Pennsylvania criminal rulemaking, verifies
+          extracted claims against source text, and routes every item to human review.">
     <meta property="og:url" content="https://marcandy.github.io/projects/spidercrawler/">
     <meta property="og:image" content="https://marcandy.github.io/assets/social-card.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -52,10 +53,11 @@
         </div>
         <h1>spiderCrawler</h1>
         <p class="case-summary">
-          A small Node.js scraper with big-project hygiene: Jest suite, supertest, CircleCI.
+          A Python pipeline that monitors Pennsylvania criminal rulemaking, verifies
+          extracted claims against source text, and routes every item to human review.
         </p>
         <ul class="tag-list" aria-label="spiderCrawler technologies">
-          <li>Node.js</li><li>Express</li><li>Cheerio</li><li>Jest</li><li>CircleCI</li>
+          <li>Python</li><li>PDF extraction</li><li>LLM APIs</li><li>Human review</li><li>GitHub Actions</li>
         </ul>
         <div class="project-links">
           <a href="https://github.com/Marcandy/spiderCrawler">Repository <span aria-hidden="true">↗</span></a>
@@ -63,43 +65,21 @@
 
         <div class="case-body">
           <h2>Problem</h2>
-          <p>
-            I needed structured data out of pages that don't offer an API. A classic
-            scrape-and-serve job, small enough to do carelessly. The point of this repo is
-            that I didn't.
-          </p>
-
+          <p>Rulemaking updates arrive as committee-page entries and PDFs. A useful change monitor must preserve the source of each claim and prevent unsupported summaries from reaching a published digest.</p>
           <h2>Approach</h2>
-          <p>
-            An Express service wrapping an axios and cheerio scraper, with the extraction logic
-            isolated in <code>src/scraper.js</code> and shared helpers in <code>src/utils.js</code>.
-          </p>
-
+          <p>The Python pipeline fetches committee pages, checks their structure, detects new items, extracts PDF text, and requests structured summaries. A deterministic verifier checks source quotations, dates, and rule identifiers before routing records to a local review app.</p>
           <h2>Key decisions</h2>
           <ul>
-            <li>
-              <strong>Tests on a weekend-sized project.</strong> A Jest suite covers the scraper,
-              with supertest exercising the HTTP surface. Scrapers break silently, and a failing
-              test is how you find out before your consumer does.
-            </li>
-            <li>
-              <strong>CI from day one.</strong> CircleCI runs the suite on every push, with
-              <code>jest-junit</code> producing machine-readable reports the CI UI can surface.
-            </li>
+            <li><strong>Keep the model inside a checked pipeline.</strong> Fetching, detection, source checks, routing, and publication remain deterministic steps around extraction.</li>
+            <li><strong>Fail closed on unsupported claims.</strong> Blocked records cannot be approved; edited summaries pass through verification again.</li>
+            <li><strong>Require human approval.</strong> The digest includes only approved items with source and review provenance.</li>
+            <li><strong>Detect source changes.</strong> Unexpected page structure or record counts stop processing rather than silently producing misleading updates.</li>
           </ul>
-
-          <h2>Result</h2>
-          <p>
-            A small tool that does its job, with tests and CI treated the same way I'd treat them
-            on a real product.
-          </p>
-
-          <h2>What I'd do next</h2>
-          <p>
-            Recorded HTML fixtures for fully deterministic tests, a politeness layer (rate
-            limiting, robots.txt respect) if it ever pointed at hosts I don't control, and a
-            README, as part of the same documentation uplift as the rest of my repos.
-          </p>
+          <h2>Result and limits</h2>
+          <p>The repository documents an implemented pipeline, verifier, review app, digest, evaluation harness, and offline test suite. As of November 1, 2026, evaluation results and external reviewer validation are still pending. These are implementation claims, not measured extraction accuracy.</p>
+          <p>This is a rulemaking-monitoring project, not legal advice. Read the <a href="https://github.com/Marcandy/spiderCrawler/blob/main/docs/LIMITATIONS.md">limitations</a> and <a href="https://github.com/Marcandy/spiderCrawler/blob/main/docs/EVAL.md">evaluation plan</a> with the source.</p>
+          <h2>Next validation</h2>
+          <p>Run the evaluation harness on the documented fixtures, publish measured failure cases, and obtain external review before making reliability claims.</p>
         </div>
 
         <aside class="case-contact" aria-label="Contact Marc-Andy">
