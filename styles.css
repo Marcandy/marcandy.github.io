@@ -445,7 +445,6 @@ h2 {
   padding: clamp(1.25rem, 2.5vw, 2rem);
   border: 1px solid var(--line);
   background: var(--surface);
-  scroll-margin-top: 7rem;
 }
 
 .project-card .project-copy {
