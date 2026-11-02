@@ -463,28 +463,6 @@ h2 {
   margin: 1rem 0 1.25rem;
 }
 
-.project-card .project-details div {
-  grid-template-columns: 1fr;
-  gap: 0.4rem;
-}
-
-.project-status {
-  align-self: flex-start;
-  margin: 0 0 1rem;
-  padding: 0.3rem 0.6rem;
-  color: var(--accent-dark);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.project-note {
-  margin: 1rem 0 0;
-  color: #4f504b;
-  font-size: 0.85rem;
-}
-
 .project-card .tag-list {
   margin-bottom: 1.25rem;
 }

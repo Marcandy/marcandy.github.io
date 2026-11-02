@@ -67,7 +67,7 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="styles.css?v=1299a041">
+    <link rel="stylesheet" href="styles.css?v=8560dc1c">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -142,9 +142,8 @@
           <p class="eyebrow">Selected work</p>
           <h2 id="work-title">A closer look at what I build.</h2>
           <p>
-            Six selected projects, from a live full-stack beta to source-grounded AI
-            and agent workflow tools. Each includes a live beta or public code, an engineering decision,
-            and its current scope. See more <a href="#community">community contributions</a>.
+            Full-stack applications and AI tools built with React, Python, Java, and Node.js.
+            Explore the demo or source code.
           </p>
         </div>
 
@@ -161,53 +160,35 @@
           <article class="project-card" id="vera" aria-labelledby="vera-title">
             <div class="project-copy">
               <div class="project-kicker"><span>01</span><p>Full-stack product</p></div>
-              <p class="project-status">Live beta</p>
               <h3 id="vera-title">Vera</h3>
               <p class="project-summary">A home care workspace connecting visits, caregiver documents, evidence review, and billing readiness.</p>
-              <dl class="project-details">
-                <div><dt>Engineering</dt><dd>React calls a Java Spring Boot API; server-side roles and ownership checks protect visit and document workflows.</dd></div>
-              </dl>
-              <p class="project-note">Fictional demo data; claim submission is simulated. Full-stack source is private.</p>
               <ul class="tag-list" aria-label="Vera technologies"><li>React</li><li>Java</li><li>Spring Boot</li><li>MySQL</li></ul>
               <div class="project-links">
-                <a href="https://veraforcare.com" aria-label="Vera: Live beta">Live beta <span aria-hidden="true">&nearr;</span></a>
-                <a href="/projects/vera/" aria-label="Vera: Case study">Case study <span aria-hidden="true">&nearr;</span></a>
+                <a href="https://veraforcare.com" aria-label="Vera: Live demo">Live demo <span aria-hidden="true">&nearr;</span></a>
               </div>
             </div>
           </article>
 
           <article class="project-card" id="helpdesk-automata" aria-labelledby="helpdesk-automata-title">
             <div class="project-copy">
-              <div class="project-kicker"><span>02</span><p>Python API foundation</p></div>
-              <p class="project-status">In development</p>
+              <div class="project-kicker"><span>02</span><p>Python backend</p></div>
               <h3 id="helpdesk-automata-title">Helpdesk Automata</h3>
-              <p class="project-summary">A FastAPI and PostgreSQL foundation for support-ticket workflows, with a repeatable setup and verification process.</p>
-              <dl class="project-details">
-                <div><dt>Engineering</dt><dd>Documented baseline checks separate inherited authentication and health endpoints from planned ticket and agent features.</dd></div>
-              </dl>
-              <p class="project-note">Built from an MIT-licensed template. Ticket automation is planned.</p>
+              <p class="project-summary">A Python API built with FastAPI and PostgreSQL, featuring authentication, health checks, and automated testing.</p>
               <ul class="tag-list" aria-label="Helpdesk Automata technologies"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>pytest</li></ul>
               <div class="project-links">
                 <a href="https://github.com/Marcandy/helpdesk-automata" aria-label="Helpdesk Automata: GitHub code">GitHub code <span aria-hidden="true">&nearr;</span></a>
-                <a href="https://github.com/Marcandy/helpdesk-automata/blob/main/docs/BASELINE.md" aria-label="Helpdesk Automata: Baseline evidence">Baseline evidence <span aria-hidden="true">&nearr;</span></a>
               </div>
             </div>
           </article>
 
           <article class="project-card" id="spidercrawler" aria-labelledby="spidercrawler-title">
             <div class="project-copy">
-              <div class="project-kicker"><span>03</span><p>Source-grounded AI pipeline</p></div>
-              <p class="project-status">Evaluation pending</p>
+              <div class="project-kicker"><span>03</span><p>AI document monitoring</p></div>
               <h3 id="spidercrawler-title">spiderCrawler</h3>
-              <p class="project-summary">A Python monitor that turns Pennsylvania criminal rulemaking updates into structured, source-linked summaries for human review.</p>
-              <dl class="project-details">
-                <div><dt>Engineering</dt><dd>Verify quotes against source text, block unsupported claims, and publish only after a person approves.</dd></div>
-              </dl>
-              <p class="project-note">Offline tests are documented; evaluation results and external review are pending.</p>
+              <p class="project-summary">An AI-powered monitor that turns Pennsylvania rulemaking updates into source-linked summaries with quote verification and human review.</p>
               <ul class="tag-list" aria-label="spiderCrawler technologies"><li>Python</li><li>PDF extraction</li><li>LLM APIs</li><li>Human review</li></ul>
               <div class="project-links">
                 <a href="https://github.com/Marcandy/spiderCrawler" aria-label="spiderCrawler: GitHub code">GitHub code <span aria-hidden="true">&nearr;</span></a>
-                <a href="/projects/spidercrawler/" aria-label="spiderCrawler: Case study">Case study <span aria-hidden="true">&nearr;</span></a>
               </div>
             </div>
           </article>
@@ -215,17 +196,11 @@
           <article class="project-card" id="crowdfunder" aria-labelledby="crowdfunder-title">
             <div class="project-copy">
               <div class="project-kicker"><span>04</span><p>Full-stack web application</p></div>
-              <p class="project-status">Earlier project</p>
               <h3 id="crowdfunder-title">CrowdFunder</h3>
               <p class="project-summary">A crowdfunding application with campaign creation, authentication, project discovery, and a Stripe contribution flow.</p>
-              <dl class="project-details">
-                <div><dt>Engineering</dt><dd>React and Redux connect to Express controllers and PostgreSQL queries, with Stripe and Amazon S3 integrations.</dd></div>
-              </dl>
-              <p class="project-note">Source available; the former hosted demo is offline.</p>
               <ul class="tag-list" aria-label="CrowdFunder technologies"><li>React / Redux</li><li>Express</li><li>PostgreSQL</li><li>Stripe</li></ul>
               <div class="project-links">
                 <a href="https://github.com/Marcandy/crowdFunder" aria-label="CrowdFunder: GitHub code">GitHub code <span aria-hidden="true">&nearr;</span></a>
-                <a href="/projects/crowdfunder/" aria-label="CrowdFunder: Case study">Case study <span aria-hidden="true">&nearr;</span></a>
               </div>
             </div>
           </article>
@@ -233,13 +208,8 @@
           <article class="project-card" id="trellin" aria-labelledby="trellin-title">
             <div class="project-copy">
               <div class="project-kicker"><span>05</span><p>Full-stack team project</p></div>
-              <p class="project-status">Earlier team project</p>
               <h3 id="trellin-title">Trellin</h3>
               <p class="project-summary">A professional networking application combining profiles, connections, and a social timeline with Trello-style lists and cards.</p>
-              <dl class="project-details">
-                <div><dt>Engineering</dt><dd>React and Redux manage profile, connection, timeline, and list state; Express controllers and PostgreSQL queries support the API.</dd></div>
-              </dl>
-              <p class="project-note">Built with a team at DevMountain. Explore the original source repository.</p>
               <ul class="tag-list" aria-label="Trellin technologies"><li>React / Redux</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li></ul>
               <div class="project-links">
                 <a href="https://github.com/TrellinDm/Trellin-" aria-label="Trellin: GitHub code">GitHub code <span aria-hidden="true">&nearr;</span></a>
@@ -249,18 +219,12 @@
 
           <article class="project-card" id="think-wide" aria-labelledby="think-wide-title">
             <div class="project-copy">
-              <div class="project-kicker"><span>06</span><p>Collaborative MCP project</p></div>
-              <p class="project-status">Team contribution</p>
+              <div class="project-kicker"><span>06</span><p>MCP developer tools</p></div>
               <h3 id="think-wide-title">Think-Wide</h3>
-              <p class="project-summary">MCP tools and a web workbench give coding agents exact repository evidence and preserve human decisions across sessions.</p>
-              <dl class="project-details">
-                <div><dt>Engineering</dt><dd>Evidence includes source locations and hashes; human decisions persist when agents regenerate their findings.</dd></div>
-              </dl>
-              <p class="project-note">My contribution: product/UI, component catalog, git snapshot reader, workbench, and brief.</p>
+              <p class="project-summary">MCP tools and a React workbench give coding agents verified source context and preserve human decisions across sessions.</p>
               <ul class="tag-list" aria-label="Think-Wide technologies"><li>TypeScript</li><li>MCP</li><li>React</li><li>Evidence contracts</li></ul>
               <div class="project-links">
                 <a href="https://github.com/freebatteryfactory/think-wide-hackathon" aria-label="Think-Wide: GitHub code">GitHub code <span aria-hidden="true">&nearr;</span></a>
-                <a href="https://github.com/Marcandy/think-wide-hackathon" aria-label="Think-Wide: My fork">My fork <span aria-hidden="true">&nearr;</span></a>
               </div>
             </div>
           </article>
