@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vera case study | Marc-Andy Noel Jeune</title>
+    <title>Vera | Marc-Andy Noel Jeune</title>
     <meta
       name="description"
-      content="How I built Vera, a home care operations workspace modeled on Electronic Visit Verification: the problem, the architecture, the key decisions, and the result."
+      content="A home care workspace for visit tracking, caregiver documents, evidence review, and billing readiness."
     >
     <meta name="author" content="Marc-Andy Noel Jeune">
     <meta name="theme-color" content="#f3f0e8">
@@ -15,14 +15,14 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon.png">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Marc-Andy Noel Jeune">
-    <meta property="og:title" content="Vera case study | Marc-Andy Noel Jeune">
-    <meta property="og:description" content="One clean flow from scheduled home-care visit to billable record, modeled on federally required Electronic Visit Verification.">
+    <meta property="og:title" content="Vera | Marc-Andy Noel Jeune">
+    <meta property="og:description" content="A home care workspace for visit tracking, caregiver documents, evidence review, and billing readiness.">
     <meta property="og:url" content="https://marcandy.github.io/projects/vera/">
     <meta property="og:image" content="https://marcandy.github.io/assets/social-card.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vera case study | Marc-Andy Noel Jeune">
+    <meta name="twitter:title" content="Vera | Marc-Andy Noel Jeune">
     <meta name="twitter:image" content="https://marcandy.github.io/assets/social-card.png">
-    <link rel="stylesheet" href="/styles.css?v=8560dc1c">
+    <link rel="stylesheet" href="/styles.css?v=e0753fae">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -35,7 +35,7 @@
         <span class="wordmark-full">Marc-Andy Noel Jeune</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="/#work">Work</a>
+        <a href="/#work">Projects</a>
         <a href="/#experience">Experience</a>
         <a href="/#community">Community</a>
         <a href="/#skills">Skills</a>
@@ -45,68 +45,36 @@
 
     <main id="main-content">
       <article class="case">
-        <p class="case-crumbs"><a href="/#work"><span aria-hidden="true">←</span> All work</a></p>
-        <div class="project-kicker">
-          <span>01</span>
-          <p>Case study · Product MVP · 2026</p>
-        </div>
+        <p class="case-crumbs"><a href="/#work"><span aria-hidden="true">←</span> All projects</a></p>
+        <div class="project-kicker"><p>Full-stack application</p></div>
         <h1>Vera</h1>
-        <p class="case-summary">
-          A full-stack home care beta that connects visits, caregiver documents,
-          evidence review, and billing readiness with server-enforced access rules.
-        </p>
-        <ul class="tag-list" aria-label="Vera technologies">
-          <li>React</li><li>Vite</li><li>React Router</li><li>CSS Modules</li><li>Java</li><li>Spring Boot</li><li>MySQL</li>
-        </ul>
+        <p class="case-summary">A home care workspace for visit tracking, caregiver documents, evidence review, and billing readiness.</p>
+        <ul class="tag-list" aria-label="Technologies"><li>React</li><li>Java</li><li>Spring Boot</li><li>MySQL</li></ul>
         <div class="project-links">
-          <a href="https://veraforcare.com">Live demo <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/Marcandy/vera">Earlier frontend source <span aria-hidden="true">&nearr;</span></a>
+          <a href="https://veraforcare.com">Live demo <span aria-hidden="true">&nearr;</span></a>
         </div>
 
-        <figure class="case-figure">
-          <div class="visual-window">
-            <div class="visual-toolbar"><span></span><span></span><span></span><b>VERA / LIVE APP</b></div>
-            <img
-              class="visual-shot"
-              src="/assets/vera-dashboard.webp"
-              alt="Vera admin dashboard listing the day's home-care visits with needs-review, ready-to-bill, and in-progress statuses"
-              width="1200"
-              height="750"
-            >
-          </div>
-          <figcaption>Earlier frontend dashboard: the visit-status interface that preceded the full-stack beta.</figcaption>
-        </figure>
 
         <div class="case-body">
-          <h2>Problem</h2>
-          <p>Interviews with home care agency owners in Philadelphia highlighted disconnected caregiver paperwork, visit tracking, and patient signatures. Vera connects these tasks in one workspace, from a scheduled visit to evidence review and billing readiness.</p>
-          <h2>My role</h2>
-          <p>Designer and developer, from agency-owner interviews and interface design to the React client and Java Spring Boot API.</p>
-          <h2>Approach</h2>
-          <p>Administrators manage patients, caregivers, document review, visits, and billing. Caregivers use a phone-width interface for their assigned visits, check-in, checkout, and document submissions. React services call the API; Java services enforce the rules over MySQL records.</p>
-          <h2>Key decisions</h2>
+          <h2>What I built</h2>
+          <p>Designed and developed the product from interviews with Philadelphia agency owners through the React interface and Spring Boot API.</p>
+          <h2>Highlights</h2>
           <ul>
-            <li><strong>Enforce access on the server.</strong> Sessions, roles, and ownership checks constrain access to caregiver records and visit actions.</li>
-            <li><strong>Keep domain transitions in services.</strong> Check-in, checkout, missing evidence, and simulated claim submission have explicit service operations.</li>
-            <li><strong>Require evidence to resolve flags.</strong> Missing assessment or signature evidence must be supplied before a visit becomes billable.</li>
-            <li><strong>Preserve document history.</strong> Pending renewals do not replace accepted credentials until review; private downloads and document policies remain server-controlled.</li>
+            <li>Role-based administrator and caregiver workflows, with server-side authentication and ownership checks.</li>
+            <li>Visit check-in, checkout, assessments, and signatures connected to evidence review.</li>
+            <li>Caregiver document uploads, renewal review, and persistent MySQL records.</li>
           </ul>
-          <h2>Result and scope</h2>
-          <p>The live beta at <a href="https://veraforcare.com">veraforcare.com</a> connects the React interface to the Spring Boot API and persistent MySQL data. The full-stack repository is private. The <a href="https://github.com/Marcandy/vera">earlier frontend repository</a> is available separately and does not represent the current backend.</p>
-          <p>Vera is an EVV-inspired beta using fictional demo data and simulated claim submission. It is not certified EVV software and makes no HIPAA claims. The screenshot above records the earlier frontend interface.</p>
-          <h2>Next validation</h2>
-          <p>Continue checking role boundaries, visit transitions, and document renewal behavior as the beta grows. Separate demonstrated product behavior from certification or operational outcomes that have not been established.</p>
         </div>
 
         <aside class="case-contact" aria-label="Contact Marc-Andy">
-          <p>Have a similar problem to solve?</p>
+          <p>Discuss an engineering role.</p>
           <a href="mailto:marcandy.nj@gmail.com">Email Marc-Andy <span aria-hidden="true">&nearr;</span></a>
           <a href="/assets/marc-andy-noel-jeune-resume.pdf" download>Download resume</a>
         </aside>
 
-        <nav class="case-nav" aria-label="More work">
-          <span></span>
-          <a href="/projects/openclaw/">Next: OpenClaw automation pipeline <span aria-hidden="true">→</span></a>
+        <nav class="case-nav" aria-label="More projects">
+          <a href="/#work">All projects <span aria-hidden="true">&rarr;</span></a>
+          <a href="/#contact">Contact <span aria-hidden="true">&nearr;</span></a>
         </nav>
       </article>
     </main>
@@ -118,7 +86,7 @@
         </span>
         <p>© 2026 Marc-Andy Noel Jeune</p>
       </div>
-      <p>Built with semantic HTML, custom CSS, and careful restraint.</p>
+      <a href="mailto:marcandy.nj@gmail.com">marcandy.nj@gmail.com</a>
     </footer>
   </body>
 </html>
